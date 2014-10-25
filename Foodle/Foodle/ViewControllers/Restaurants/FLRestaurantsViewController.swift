@@ -1,5 +1,5 @@
 //
-//  FLBaseViewController.swift
+//  FLRestaurantsViewController.swift
 //  Foodle
 //
 //  Created by Alex Zimin on 25/10/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FLBaseViewController: UIViewController {
+class FLRestaurantsViewController: FLBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,4 +20,6 @@ class FLBaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
 }

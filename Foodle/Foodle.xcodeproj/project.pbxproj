@@ -18,6 +18,9 @@
 		92CBB41119FBA657000E5732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB41019FBA657000E5732 /* Images.xcassets */; };
 		92CBB41419FBA657000E5732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB41219FBA657000E5732 /* LaunchScreen.xib */; };
 		92CBB42E19FBA77F000E5732 /* FLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB42D19FBA77F000E5732 /* FLBaseViewController.swift */; };
+		92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */; };
+		92CBB43419FBA7B7000E5732 /* FLRestaurantsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */; };
+		92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		92CBB41319FBA657000E5732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		92CBB42919FBA6A2000E5732 /* Foodle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Foodle-Bridging-Header.h"; sourceTree = "<group>"; };
 		92CBB42D19FBA77F000E5732 /* FLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLBaseViewController.swift; path = ViewControllers/Base/FLBaseViewController.swift; sourceTree = "<group>"; };
+		92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLRestaurantsViewController.swift; path = ViewControllers/Restaurants/FLRestaurantsViewController.swift; sourceTree = "<group>"; };
+		92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLRestaurantsViewController.xib; path = ViewControllers/Restaurants/FLRestaurantsViewController.xib; sourceTree = "<group>"; };
+		92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLBaseNavigationController.swift; path = ViewControllers/Base/FLBaseNavigationController.swift; sourceTree = "<group>"; };
 		FC060073648A666DD1C33A9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -147,6 +153,7 @@
 		92CBB42719FBA685000E5732 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				92CBB43019FBA79C000E5732 /* Restaurants */,
 				92CBB42F19FBA782000E5732 /* Base */,
 			);
 			name = ViewControllers;
@@ -163,8 +170,18 @@
 			isa = PBXGroup;
 			children = (
 				92CBB42D19FBA77F000E5732 /* FLBaseViewController.swift */,
+				92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		92CBB43019FBA79C000E5732 /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */,
+				92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */,
+			);
+			name = Restaurants;
 			sourceTree = "<group>";
 		};
 		F81A08115F68273A4859CC52 /* Pods */ = {
@@ -257,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CBB43419FBA7B7000E5732 /* FLRestaurantsViewController.xib in Resources */,
 				92CBB3E719FBA574000E5732 /* LaunchScreen.xib in Resources */,
 				92CBB3E419FBA574000E5732 /* Images.xcassets in Resources */,
 			);
@@ -312,7 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */,
 				92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */,
+				92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */,
 				92CBB42E19FBA77F000E5732 /* FLBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
