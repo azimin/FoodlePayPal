@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "FLPaymentsManager.h"
+@interface ViewController : UIViewController <PayPalPaymentDelegate>
 
 
 @end

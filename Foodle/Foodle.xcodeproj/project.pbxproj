@@ -22,6 +22,13 @@
 		92CBB43419FBA7B7000E5732 /* FLRestaurantsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */; };
 		92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */; };
 		A504C7B919FBB0C50099A7C5 /* FLBeaconsMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A504C7B819FBB0C50099A7C5 /* FLBeaconsMonitor.m */; };
+		A55BEEB319FBC1D20073A999 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51D7B1A19FBBF2A00DD5A3F /* CoreAudio.framework */; };
+		A55BEEB419FBC1D70073A999 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51D7B1819FBBF2500DD5A3F /* AudioToolbox.framework */; };
+		A55BEEB519FBC1DD0073A999 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3019FBA9DD000D3066 /* CoreLocation.framework */; };
+		A55BEEB619FBC1E50073A999 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51D7B1E19FBBF4E00DD5A3F /* SystemConfiguration.framework */; };
+		A55BEEB719FBC1E80073A999 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3219FBA9F4000D3066 /* MobileCoreServices.framework */; };
+		A55BEEB819FBC1F60073A999 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51D7B1C19FBBF3300DD5A3F /* AVFoundation.framework */; };
+		A55BEEB919FBC1FD0073A999 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51D7B1419FBBF0100DD5A3F /* MessageUI.framework */; };
 		A566AD2F19FBA9B7000D3066 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD2E19FBA9B7000D3066 /* CoreBluetooth.framework */; };
 		A566AD3119FBA9DD000D3066 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3019FBA9DD000D3066 /* CoreLocation.framework */; };
 		A566AD3319FBA9F4000D3066 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3219FBA9F4000D3066 /* MobileCoreServices.framework */; };
@@ -29,6 +36,9 @@
 		A566AD3719FBAA6E000D3066 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3619FBAA6E000D3066 /* CoreGraphics.framework */; };
 		A566AD3919FBAA75000D3066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3819FBAA75000D3066 /* UIKit.framework */; };
 		A566AD3D19FBAAAC000D3066 /* FLBeaconBroadcaster.m in Sources */ = {isa = PBXBuildFile; fileRef = A566AD3C19FBAAAC000D3066 /* FLBeaconBroadcaster.m */; };
+		A5935EB819FBC9180020553A /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5935EB019FBC9180020553A /* libPayPalMobile.a */; };
+		A5BA934819FBC28D00DD73C5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51D7B1619FBBF1700DD5A3F /* CoreMedia.framework */; };
+		A5FAFEEE19FBB75F0093B1FD /* FLPaymentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FAFEED19FBB75F0093B1FD /* FLPaymentsManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +66,12 @@
 		92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLBaseNavigationController.swift; path = ViewControllers/Base/FLBaseNavigationController.swift; sourceTree = "<group>"; };
 		A504C7B719FBB0C50099A7C5 /* FLBeaconsMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLBeaconsMonitor.h; sourceTree = "<group>"; };
 		A504C7B819FBB0C50099A7C5 /* FLBeaconsMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLBeaconsMonitor.m; sourceTree = "<group>"; };
+		A51D7B1419FBBF0100DD5A3F /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A51D7B1619FBBF1700DD5A3F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A51D7B1819FBBF2500DD5A3F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A51D7B1A19FBBF2A00DD5A3F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A51D7B1C19FBBF3300DD5A3F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A51D7B1E19FBBF4E00DD5A3F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A566AD2E19FBA9B7000D3066 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A566AD3019FBA9DD000D3066 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A566AD3219FBA9F4000D3066 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -64,6 +80,17 @@
 		A566AD3819FBAA75000D3066 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A566AD3B19FBAAAC000D3066 /* FLBeaconBroadcaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLBeaconBroadcaster.h; sourceTree = "<group>"; };
 		A566AD3C19FBAAAC000D3066 /* FLBeaconBroadcaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLBeaconBroadcaster.m; sourceTree = "<group>"; };
+		A5935EAD19FBC8AB0020553A /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPayPalMobile.a; path = "Pods/PayPal-iOS-SDK/PayPalMobile/libPayPalMobile.a"; sourceTree = "<group>"; };
+		A5935EB019FBC9180020553A /* libPayPalMobile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPayPalMobile.a; sourceTree = "<group>"; };
+		A5935EB119FBC9180020553A /* PayPalConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalConfiguration.h; sourceTree = "<group>"; };
+		A5935EB219FBC9180020553A /* PayPalFuturePaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalFuturePaymentViewController.h; sourceTree = "<group>"; };
+		A5935EB319FBC9180020553A /* PayPalMobile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalMobile.h; sourceTree = "<group>"; };
+		A5935EB419FBC9180020553A /* PayPalOAuthScopes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalOAuthScopes.h; sourceTree = "<group>"; };
+		A5935EB519FBC9180020553A /* PayPalPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPayment.h; sourceTree = "<group>"; };
+		A5935EB619FBC9180020553A /* PayPalPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalPaymentViewController.h; sourceTree = "<group>"; };
+		A5935EB719FBC9180020553A /* PayPalProfileSharingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPalProfileSharingViewController.h; sourceTree = "<group>"; };
+		A5FAFEEC19FBB75F0093B1FD /* FLPaymentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLPaymentsManager.h; sourceTree = "<group>"; };
+		A5FAFEED19FBB75F0093B1FD /* FLPaymentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLPaymentsManager.m; sourceTree = "<group>"; };
 		FC060073648A666DD1C33A9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +113,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BA934819FBC28D00DD73C5 /* CoreMedia.framework in Frameworks */,
+				A55BEEB919FBC1FD0073A999 /* MessageUI.framework in Frameworks */,
+				A55BEEB819FBC1F60073A999 /* AVFoundation.framework in Frameworks */,
+				A5935EB819FBC9180020553A /* libPayPalMobile.a in Frameworks */,
+				A55BEEB419FBC1D70073A999 /* AudioToolbox.framework in Frameworks */,
+				A55BEEB719FBC1E80073A999 /* MobileCoreServices.framework in Frameworks */,
+				A55BEEB619FBC1E50073A999 /* SystemConfiguration.framework in Frameworks */,
+				A55BEEB519FBC1DD0073A999 /* CoreLocation.framework in Frameworks */,
+				A55BEEB319FBC1D20073A999 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +131,13 @@
 		55A9A3B9F71BF4F77D5D9BD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5935EAD19FBC8AB0020553A /* libPayPalMobile.a */,
+				A51D7B1E19FBBF4E00DD5A3F /* SystemConfiguration.framework */,
+				A51D7B1C19FBBF3300DD5A3F /* AVFoundation.framework */,
+				A51D7B1A19FBBF2A00DD5A3F /* CoreAudio.framework */,
+				A51D7B1819FBBF2500DD5A3F /* AudioToolbox.framework */,
+				A51D7B1619FBBF1700DD5A3F /* CoreMedia.framework */,
+				A51D7B1419FBBF0100DD5A3F /* MessageUI.framework */,
 				A566AD3819FBAA75000D3066 /* UIKit.framework */,
 				A566AD3619FBAA6E000D3066 /* CoreGraphics.framework */,
 				A566AD3419FBAA06000D3066 /* CFNetwork.framework */,
@@ -162,8 +205,9 @@
 				92CBB40719FBA657000E5732 /* AppDelegate.h */,
 				92CBB40819FBA657000E5732 /* AppDelegate.m */,
 				92CBB40A19FBA657000E5732 /* ViewController.h */,
-				A504C7B619FBB0AD0099A7C5 /* Beacons */,
 				92CBB40B19FBA657000E5732 /* ViewController.m */,
+				A504C7BA19FBB5A00099A7C5 /* Payments */,
+				A504C7B619FBB0AD0099A7C5 /* Beacons */,
 				92CBB40D19FBA657000E5732 /* Main.storyboard */,
 				92CBB41019FBA657000E5732 /* Images.xcassets */,
 				92CBB41219FBA657000E5732 /* LaunchScreen.xib */,
@@ -175,6 +219,7 @@
 		92CBB40319FBA657000E5732 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A5935EAF19FBC9180020553A /* PayPalMobile */,
 				92CBB40419FBA657000E5732 /* Info.plist */,
 				92CBB40519FBA657000E5732 /* main.m */,
 			);
@@ -225,6 +270,15 @@
 			name = Beacons;
 			sourceTree = "<group>";
 		};
+		A504C7BA19FBB5A00099A7C5 /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				A5FAFEEC19FBB75F0093B1FD /* FLPaymentsManager.h */,
+				A5FAFEED19FBB75F0093B1FD /* FLPaymentsManager.m */,
+			);
+			name = Payments;
+			sourceTree = "<group>";
+		};
 		A566AD3A19FBAA8F000D3066 /* BroadCasting */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +286,21 @@
 				A566AD3C19FBAAAC000D3066 /* FLBeaconBroadcaster.m */,
 			);
 			name = BroadCasting;
+			sourceTree = "<group>";
+		};
+		A5935EAF19FBC9180020553A /* PayPalMobile */ = {
+			isa = PBXGroup;
+			children = (
+				A5935EB019FBC9180020553A /* libPayPalMobile.a */,
+				A5935EB119FBC9180020553A /* PayPalConfiguration.h */,
+				A5935EB219FBC9180020553A /* PayPalFuturePaymentViewController.h */,
+				A5935EB319FBC9180020553A /* PayPalMobile.h */,
+				A5935EB419FBC9180020553A /* PayPalOAuthScopes.h */,
+				A5935EB519FBC9180020553A /* PayPalPayment.h */,
+				A5935EB619FBC9180020553A /* PayPalPaymentViewController.h */,
+				A5935EB719FBC9180020553A /* PayPalProfileSharingViewController.h */,
+			);
+			path = PayPalMobile;
 			sourceTree = "<group>";
 		};
 		F81A08115F68273A4859CC52 /* Pods */ = {
@@ -404,6 +473,7 @@
 			files = (
 				A566AD3D19FBAAAC000D3066 /* FLBeaconBroadcaster.m in Sources */,
 				A504C7B919FBB0C50099A7C5 /* FLBeaconsMonitor.m in Sources */,
+				A5FAFEEE19FBB75F0093B1FD /* FLPaymentsManager.m in Sources */,
 				92CBB40C19FBA657000E5732 /* ViewController.m in Sources */,
 				92CBB40919FBA657000E5732 /* AppDelegate.m in Sources */,
 				92CBB40619FBA657000E5732 /* main.m in Sources */,
@@ -564,6 +634,15 @@
 				INFOPLIST_FILE = FoodModels/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/PayPal-iOS-SDK/PayPalMobile",
+					"$(PROJECT_DIR)/FoodModels/PayPalMobile",
+				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lc++",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -571,7 +650,7 @@
 		};
 		92CBB42319FBA657000E5732 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B9F58D8B17A7DA5120BB25A /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 286CB336AE9E647C5C96382E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -579,6 +658,11 @@
 				INFOPLIST_FILE = FoodModels/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/PayPal-iOS-SDK/PayPalMobile",
+					"$(PROJECT_DIR)/FoodModels/PayPalMobile",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

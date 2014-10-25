@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FLBeaconBroadcaster.h"
 #import "FLBeaconsMonitor.h"
+
 @interface AppDelegate ()
 @property FLBeaconBroadcaster *broadcaster;
 @property FLBeaconsMonitor *monitor;
@@ -25,7 +26,7 @@
 	} else {
 		self.monitor = [FLBeaconsMonitor new];
 	}
-	
+	self.paymentsManager = [FLPaymentsManager new];
     return YES;
 }
 
@@ -51,4 +52,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
++ (AppDelegate *)sharedAppDelegate {
+	return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
 @end
