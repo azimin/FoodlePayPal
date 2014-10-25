@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window.makeKeyAndVisible()
         
-        let restauerantsVC = FLMenuViewController(nibName: "FLMenuViewController", bundle: nil)
+        let restauerantsVC = FLGuestViewController(nibName: "FLGuestViewController", bundle: nil)
         let navigationVC = FLBaseNavigationController(rootViewController: restauerantsVC)
 
         window.rootViewController = navigationVC

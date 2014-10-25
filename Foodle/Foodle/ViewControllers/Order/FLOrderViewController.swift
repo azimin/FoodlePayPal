@@ -16,8 +16,6 @@ class FLOrderViewController: FLBaseViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        order.append(FLDishEntity(dishName: "Bla bla", dishDescription: "gd", dishImageURL: "coctailImage", dishPrice: 15.5, dishCategory: "sad"))
-
         self.tableView.registerNib(UINib(nibName: "FLOrderCell", bundle: nil), forCellReuseIdentifier: "FLOrderCell");
     }
 
