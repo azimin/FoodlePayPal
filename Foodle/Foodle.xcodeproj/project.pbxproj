@@ -78,6 +78,9 @@
 		92D6EF9B19FBE4030082EEE2 /* FLDishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6EF9919FBE4030082EEE2 /* FLDishTableViewCell.swift */; };
 		92D6EF9C19FBE4030082EEE2 /* FLDishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D6EF9A19FBE4030082EEE2 /* FLDishTableViewCell.xib */; };
 		92D6EF9E19FBE6F60082EEE2 /* FLDishEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6EF9D19FBE6F60082EEE2 /* FLDishEntity.swift */; };
+		A538528419FC5E420080F19E /* FLOrderRequestsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528319FC5E420080F19E /* FLOrderRequestsManager.m */; };
+		A538528719FC608B0080F19E /* FLHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528619FC608B0080F19E /* FLHTTPRequestOperationManager.m */; };
+		A538528A19FC63E60080F19E /* FLUserRequestsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528919FC63E60080F19E /* FLUserRequestsManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +174,12 @@
 		92D6EF9919FBE4030082EEE2 /* FLDishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLDishTableViewCell.swift; path = ViewControllers/Menu/Cell/FLDishTableViewCell.swift; sourceTree = "<group>"; };
 		92D6EF9A19FBE4030082EEE2 /* FLDishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLDishTableViewCell.xib; path = ViewControllers/Menu/Cell/FLDishTableViewCell.xib; sourceTree = "<group>"; };
 		92D6EF9D19FBE6F60082EEE2 /* FLDishEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLDishEntity.swift; path = Core/Entities/FLDishEntity.swift; sourceTree = "<group>"; };
+		A538528219FC5E420080F19E /* FLOrderRequestsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLOrderRequestsManager.h; path = Network/FLOrderRequestsManager.h; sourceTree = "<group>"; };
+		A538528319FC5E420080F19E /* FLOrderRequestsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLOrderRequestsManager.m; path = Network/FLOrderRequestsManager.m; sourceTree = "<group>"; };
+		A538528519FC608B0080F19E /* FLHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		A538528619FC608B0080F19E /* FLHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		A538528819FC63E60080F19E /* FLUserRequestsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLUserRequestsManager.h; path = Network/FLUserRequestsManager.h; sourceTree = "<group>"; };
+		A538528919FC63E60080F19E /* FLUserRequestsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLUserRequestsManager.m; path = Network/FLUserRequestsManager.m; sourceTree = "<group>"; };
 		FC060073648A666DD1C33A9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -453,6 +462,7 @@
 		92CBB42819FBA68B000E5732 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A538528119FC5D990080F19E /* Server */,
 				92B9915519FC410600E43E08 /* PayPal */,
 				92B9914E19FC40F500E43E08 /* Beacons */,
 				92138C3519FBAA70001F041B /* Entities */,
@@ -562,6 +572,19 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		A538528119FC5D990080F19E /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				A538528519FC608B0080F19E /* FLHTTPRequestOperationManager.h */,
+				A538528619FC608B0080F19E /* FLHTTPRequestOperationManager.m */,
+				A538528219FC5E420080F19E /* FLOrderRequestsManager.h */,
+				A538528319FC5E420080F19E /* FLOrderRequestsManager.m */,
+				A538528819FC63E60080F19E /* FLUserRequestsManager.h */,
+				A538528919FC63E60080F19E /* FLUserRequestsManager.m */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
 		F81A08115F68273A4859CC52 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,7 +645,12 @@
 				TargetAttributes = {
 					92CBB3D619FBA574000E5732 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = 5MGEMLZRS4;
+						DevelopmentTeam = H4T5NA996X;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					92CBB40019FBA657000E5732 = {
 						CreatedOnToolsVersion = 6.1;
@@ -735,12 +763,15 @@
 				92138C3719FBAA9E001F041B /* FLRestaurantEntity.swift in Sources */,
 				92D6EF8419FBCB740082EEE2 /* FLRestaurantInfoCell.swift in Sources */,
 				92D6EF8819FBD1280082EEE2 /* FLButtonCell.swift in Sources */,
+				A538528419FC5E420080F19E /* FLOrderRequestsManager.m in Sources */,
+				A538528A19FC63E60080F19E /* FLUserRequestsManager.m in Sources */,
 				92D6EF9119FBDE300082EEE2 /* FLMenuViewController.swift in Sources */,
 				92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */,
 				92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */,
 				92138C4319FBB927001F041B /* Font.swift in Sources */,
 				92D6EF7619FBC2970082EEE2 /* FLRestaurantViewController.swift in Sources */,
 				92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */,
+				A538528719FC608B0080F19E /* FLHTTPRequestOperationManager.m in Sources */,
 				920DED5519FBFD8B00217EE8 /* FLOrderCell.swift in Sources */,
 				92D6EF8C19FBD7100082EEE2 /* FLRestaurantPayCell.swift in Sources */,
 				92B9916D19FC480F00E43E08 /* FLPayPalController.swift in Sources */,
@@ -885,6 +916,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Foodle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -910,7 +942,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e09c5f3e-a50d-4a0f-be9a-314c531bb481";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Foodle/Foodle-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -929,6 +961,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Foodle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -954,7 +987,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e09c5f3e-a50d-4a0f-be9a-314c531bb481";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Foodle/Foodle-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
