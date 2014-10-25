@@ -30,12 +30,18 @@
 	self.beaconRegion.notifyEntryStateOnDisplay = YES;
 	self.beaconRegion.notifyOnEntry = YES;
 	self.beaconRegion.notifyOnExit = YES;
-	
+	[self.locationManager requestAlwaysAuthorization];
+	CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+	if (status == kCLAuthorizationStatusNotDetermined) {
+		
+	}
 	[self.locationManager startMonitoringForRegion:self.beaconRegion];
 	[self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
-
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status	 {
+	
+}
 - (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error {
 	NSLog(@"monitoringDidFailForRegion - error: %@", [error localizedDescription]);
 }

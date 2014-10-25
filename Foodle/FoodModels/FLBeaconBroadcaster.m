@@ -24,7 +24,7 @@
 }
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
 	if (kUseBeacons) {
-		NSMutableDictionary *data = [[[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:beaconUUID] identifier:beaconID] peripheralDataWithMeasuredPower:@1500];
+		NSMutableDictionary *data = [[[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:beaconUUID] major:70 identifier:beaconID] peripheralDataWithMeasuredPower:@1500];
 		[self.pManager startAdvertising:data];
 	} else {
 		// Opt out from any other state
