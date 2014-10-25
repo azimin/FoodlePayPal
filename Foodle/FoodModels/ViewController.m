@@ -22,7 +22,7 @@
 }
 
 - (void)pay {
-		[[[AppDelegate sharedAppDelegate]paymentsManager]	pay:@10];
+		[[[AppDelegate sharedAppDelegate]paymentsManager]	pay:@100.0];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
