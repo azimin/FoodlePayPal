@@ -7,13 +7,14 @@
 //
 
 #import "FLBeaconBroadcaster.h"
+#import <UIKit/UIKit.h>
 @interface FLBeaconBroadcaster()
 @property CBPeripheralManager *pManager;
 @end
 @implementation FLBeaconBroadcaster
 
 - (void)broadCastBeacon {
-	self.pManager = 	[[CBPeripheralManager alloc] initWithDelegate:self queue:dispatch_get_main_queue()];
+	self.pManager = 	[[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
 }
 
 
@@ -21,10 +22,9 @@
 	
 }
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
-		NSMutableDictionary *data = [[[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:beaconUUID] identifier:beaconID] peripheralDataWithMeasuredPower:nil];
+		NSMutableDictionary *data = [[[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:beaconUUID] identifier:beaconID] peripheralDataWithMeasuredPower:@1500];
 		[self.pManager startAdvertising:data];
 }
-
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central {
 	
 }
