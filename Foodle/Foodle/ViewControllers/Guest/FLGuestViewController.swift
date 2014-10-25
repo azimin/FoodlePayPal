@@ -32,7 +32,11 @@ class FLGuestViewController: FLBaseViewController, UITableViewDelegate, UITableV
     }
     
     func openMenu() {
-        
+        let controller = FLPayPalController()
+        controller.currentController = self
+        AppDelegate.sharedAppDelegate().paymentsManager.delegate = self
+        AppDelegate.sharedAppDelegate().paymentsManager.pay(100)
+        //[[[AppDelegate sharedAppDelegate]paymentsManager]	pay:@100.0];
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -62,6 +66,20 @@ class FLGuestViewController: FLBaseViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let restauerantsVC = FLRestaurantsViewController(nibName: "FLRestaurantsViewController", bundle: nil)
         self.navigationController?.pushViewController(restauerantsVC, animated: true)
+    }
+    
+    // MARK: - PayPalDelegate
+    
+    func presentViewController(viewControllerToPresent: UIViewController) {
+        self.presentViewController(viewControllerToPresent, animated: true, completion: nil)
+    }
+    
+    func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController, didCompletePayment completedPayment: PayPalPayment) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController) {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }

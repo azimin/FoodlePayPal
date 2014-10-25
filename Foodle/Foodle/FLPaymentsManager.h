@@ -10,6 +10,7 @@
 #import "PayPalMobile.h"
 
 @interface FLPaymentsManager : NSObject
+
 @property (nonatomic, strong, readwrite) PayPalConfiguration *payPalConfiguration;
 @property (weak) UIViewController<PayPalPaymentDelegate> *delegate;
 

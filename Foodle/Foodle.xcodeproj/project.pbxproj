@@ -43,6 +43,7 @@
 		92B9916719FC41DF00E43E08 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B9916619FC41DF00E43E08 /* CoreAudio.framework */; };
 		92B9916919FC41E300E43E08 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B9916819FC41E300E43E08 /* CoreMedia.framework */; };
 		92B9916B19FC41F500E43E08 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B9916A19FC41F500E43E08 /* AVFoundation.framework */; };
+		92B9916D19FC480F00E43E08 /* FLPayPalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9916C19FC480F00E43E08 /* FLPayPalController.swift */; };
 		92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB3DC19FBA574000E5732 /* AppDelegate.swift */; };
 		92CBB3E419FBA574000E5732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB3E319FBA574000E5732 /* Images.xcassets */; };
 		92CBB3E719FBA574000E5732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB3E519FBA574000E5732 /* LaunchScreen.xib */; };
@@ -122,6 +123,7 @@
 		92B9916619FC41DF00E43E08 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		92B9916819FC41E300E43E08 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		92B9916A19FC41F500E43E08 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		92B9916C19FC480F00E43E08 /* FLPayPalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLPayPalController.swift; path = Core/PayPal/FLPayPalController.swift; sourceTree = "<group>"; };
 		92CBB3D719FBA574000E5732 /* Foodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CBB3DB19FBA574000E5732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92CBB3DC19FBA574000E5732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			children = (
 				92B9915619FC411000E43E08 /* FLPaymentsManager.h */,
 				92B9915719FC411000E43E08 /* FLPaymentsManager.m */,
+				92B9916C19FC480F00E43E08 /* FLPayPalController.swift */,
 			);
 			name = PayPal;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */,
 				920DED5519FBFD8B00217EE8 /* FLOrderCell.swift in Sources */,
 				92D6EF8C19FBD7100082EEE2 /* FLRestaurantPayCell.swift in Sources */,
+				92B9916D19FC480F00E43E08 /* FLPayPalController.swift in Sources */,
 				92138C3F19FBABED001F041B /* FrameCalculation.swift in Sources */,
 				92B9915419FC410000E43E08 /* FLBeaconsMonitor.m in Sources */,
 				920DED5019FBFC0800217EE8 /* FLOrderViewController.swift in Sources */,

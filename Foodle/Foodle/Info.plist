@@ -39,6 +39,10 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Give me location</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Give me location</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

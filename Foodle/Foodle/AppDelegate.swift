@@ -16,8 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var broadcaster: FLBeaconBroadcaster!
     var paymentsManager: FLPaymentsManager!
     var monitor: FLBeaconsMonitor!
-    var kbroadCastBeacon = true
+    var kbroadCastBeacon = false
 
+    class func sharedAppDelegate() -> AppDelegate {
+        return UIApplication.sharedApplication().delegate as AppDelegate
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // PARSE
@@ -43,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let restauerantsVC = FLGuestViewController(nibName: "FLGuestViewController", bundle: nil)
         let navigationVC = FLBaseNavigationController(rootViewController: restauerantsVC)
+        restauerantsVC.title = "\(launchOptions)"
 
         window.rootViewController = navigationVC
         

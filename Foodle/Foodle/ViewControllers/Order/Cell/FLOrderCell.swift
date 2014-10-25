@@ -31,6 +31,7 @@ class FLOrderCell: UITableViewCell {
         self.selectionStyle = .None
         dishNameLabel.adjustsFontSizeToFitWidth = true
         dishCountLabel.adjustsFontSizeToFitWidth = true
+        progressView.progressTintColor = UIColor.appColor()
         // Initialization code
     }
 
