@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "FLPaymentsManager.h"
+#import "FLBeaconsMonitor.h"
+#define kbroadCastBeacon 0
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property FLPaymentsManager *paymentsManager;
+@property FLBeaconsMonitor *monitor;
 + (AppDelegate *)sharedAppDelegate;
+
 @end
 

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "FLPaymentsManager.h"
-@interface ViewController : UIViewController <PayPalPaymentDelegate>
+#import "FLBeaconsMonitor.h"
+
+@interface ViewController : UIViewController <PayPalPaymentDelegate, FLBeaconsDelegate>
 
 
 @end

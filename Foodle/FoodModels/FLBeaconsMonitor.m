@@ -213,6 +213,7 @@
 	NSString *stringFromData = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
 	
 	NSLog(@"Received: %@", stringFromData);
+	[self.delegate didEnterCafeRegion:stringFromData];
 }
 
 @end

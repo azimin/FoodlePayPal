@@ -14,19 +14,12 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-	[[[AppDelegate sharedAppDelegate]paymentsManager] setDelegate:self];
-	
-	[NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(pay) userInfo:nil repeats:NO];
-    // Do any additional setup after loading the view, typically from a nib.
+	[super viewDidLoad];
+	[[[AppDelegate sharedAppDelegate] monitor] setDelegate:self];
 }
 
 - (void)pay {
-		[[[AppDelegate sharedAppDelegate]paymentsManager]	pay:@100.0];
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[[[AppDelegate sharedAppDelegate]paymentsManager]	pay:@100.0];
 }
 
 - (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
@@ -44,6 +37,12 @@
 - (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController {
 	// The payment was canceled; dismiss the PayPalPaymentViewController.
 	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)didEnterCafeRegion:(NSString *)cafeId {
+	UILabel *gotIt = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100,100)];
+	gotIt.text = cafeId;
+	[self.view addSubview:gotIt];
 }
 
 @end

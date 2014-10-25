@@ -5,14 +5,11 @@
 //  Created by Alex Zimin on 25/10/14.
 //  Copyright (c) 2014 Foodlle. All rights reserved.
 //
-#define kbroadCastBeacon 0
 #import "AppDelegate.h"
 #import "FLBeaconBroadcaster.h"
-#import "FLBeaconsMonitor.h"
 
 @interface AppDelegate ()
 @property FLBeaconBroadcaster *broadcaster;
-@property FLBeaconsMonitor *monitor;
 @end
 
 @implementation AppDelegate
@@ -27,7 +24,7 @@
 		self.monitor = [FLBeaconsMonitor new];
 	}
 	self.paymentsManager = [FLPaymentsManager new];
-    return YES;
+	return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
