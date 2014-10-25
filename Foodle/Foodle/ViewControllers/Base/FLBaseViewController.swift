@@ -12,7 +12,8 @@ class FLBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        view.backgroundColor = UIColor(fromHexString: "f1f1f1")
         // Do any additional setup after loading the view.
     }
 

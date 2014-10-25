@@ -8,12 +8,8 @@
 
 import UIKit
 
-extension UIFont {
-    class func mainFontWithSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-Medium", size: size)!
-    }
-    
-    class func mainBoldFontWithSize(size: CGFloat) -> UIFont {
-        return UIFont(name: "AvenirNext-Bold", size: size)!
+extension UIColor {
+    class func appColor() -> UIColor {
+        return UIColor(fromHexString: "31b55c")
     }
 }

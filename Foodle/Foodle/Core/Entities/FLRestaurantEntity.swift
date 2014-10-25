@@ -11,6 +11,7 @@ import UIKit
 class FLRestaurantEntity: NSObject {
     var restaurantName = ""
     var restaurantDescription = ""
+    var restaurantInfo = ""
     
     var restaurantImageURL = ""
     
@@ -28,5 +29,6 @@ class FLRestaurantEntity: NSObject {
         self.restaurantDescription = restaurantDescription
         self.isIBecacon = isIBecacon
         self.restaurantImageURL = restaurantImageURL
+        self.restaurantInfo = restaurantDescription
     }
 }

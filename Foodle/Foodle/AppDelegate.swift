@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window.makeKeyAndVisible()
         
-        let restauerantsVC = FLRestaurantsViewController(nibName: "FLRestaurantsViewController", bundle: nil)
+        let restauerantsVC = FLRestaurantViewController(nibName: "FLRestaurantViewController", bundle: nil)
         let navigationVC = FLBaseNavigationController(rootViewController: restauerantsVC)
 
         window.rootViewController = navigationVC
@@ -58,24 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "navBar"), forBarMetrics: UIBarMetrics.Default)
-
-//        NSDictionary *textAttributes;
-//        
-//        if ([UIDevice isDevicePad]) {
-//            textAttributes = @{ NSForegroundColorAttributeName:[UIColor whiteColor],
-//                NSFontAttributeName:[UIFont headerFontWithSize: 24.0]};
-//        }
-//        else {
-//            textAttributes = @{ NSForegroundColorAttributeName:[UIColor whiteColor],
-//                NSFontAttributeName:[UIFont headerFontWithSize: 17.0]};
-//        }
-//        
-//        [[UINavigationBar appearance] setTitleTextAttributes:textAttributes];
-//        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-//        
-//        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageInBundleNamed:@"bg_blue_nav"]
-//        forBarMetrics:UIBarMetricsDefault];
     }
 
 }
