@@ -17,6 +17,7 @@
 		92CBB40F19FBA657000E5732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB40D19FBA657000E5732 /* Main.storyboard */; };
 		92CBB41119FBA657000E5732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB41019FBA657000E5732 /* Images.xcassets */; };
 		92CBB41419FBA657000E5732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB41219FBA657000E5732 /* LaunchScreen.xib */; };
+		92CBB42E19FBA77F000E5732 /* FLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB42D19FBA77F000E5732 /* FLBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		92CBB41019FBA657000E5732 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		92CBB41319FBA657000E5732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		92CBB42919FBA6A2000E5732 /* Foodle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Foodle-Bridging-Header.h"; sourceTree = "<group>"; };
+		92CBB42D19FBA77F000E5732 /* FLBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLBaseViewController.swift; path = ViewControllers/Base/FLBaseViewController.swift; sourceTree = "<group>"; };
 		FC060073648A666DD1C33A9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,7 +95,7 @@
 			children = (
 				92CBB3DC19FBA574000E5732 /* AppDelegate.swift */,
 				92CBB42819FBA68B000E5732 /* Core */,
-				92CBB42719FBA685000E5732 /* Controllers */,
+				92CBB42719FBA685000E5732 /* ViewControllers */,
 				92CBB3FC19FBA582000E5732 /* Resources */,
 				92CBB3DA19FBA574000E5732 /* Supporting Files */,
 				92CBB42919FBA6A2000E5732 /* Foodle-Bridging-Header.h */,
@@ -142,11 +144,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		92CBB42719FBA685000E5732 /* Controllers */ = {
+		92CBB42719FBA685000E5732 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				92CBB42F19FBA782000E5732 /* Base */,
 			);
-			name = Controllers;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		92CBB42819FBA68B000E5732 /* Core */ = {
@@ -154,6 +157,14 @@
 			children = (
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		92CBB42F19FBA782000E5732 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				92CBB42D19FBA77F000E5732 /* FLBaseViewController.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		F81A08115F68273A4859CC52 /* Pods */ = {
@@ -210,6 +221,7 @@
 		92CBB3CF19FBA574000E5732 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FL;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Foodlle;
 				TargetAttributes = {
@@ -301,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */,
+				92CBB42E19FBA77F000E5732 /* FLBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
