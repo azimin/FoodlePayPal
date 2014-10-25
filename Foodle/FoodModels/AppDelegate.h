@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FLPaymentsManager.h"
 #import "FLBeaconsMonitor.h"
-#define kbroadCastBeacon 0
+#define kbroadCastBeacon 1
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
