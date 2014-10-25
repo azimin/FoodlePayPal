@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLMenuViewController" customModule="Foodle" customModuleProvider="target">
             <connections>
+                <outlet property="orderButton" destination="461-ni-PAX" id="wIv-cl-73n"/>
+                <outlet property="orderPriceLabel" destination="dAi-OI-vOK" id="8jG-A4-dum"/>
+                <outlet property="tableView" destination="rvI-Ce-Zr1" id="WXK-7O-6kt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,10 +16,73 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rvI-Ce-Zr1">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="wbd-kY-ZDT"/>
+                        <outlet property="delegate" destination="-1" id="Vyo-zi-Q5e"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="461-ni-PAX">
+                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                    <color key="backgroundColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="AJG-oT-3j0"/>
+                    </constraints>
+                    <connections>
+                        <action selector="goToOrderButtonAction:" destination="-1" eventType="touchUpInside" id="c6g-ay-Gbk"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage order" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7V-5a-ivH">
+                    <rect key="frame" x="14" y="532" width="293" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2gx-Sq-ZxB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAi-OI-vOK">
+                    <rect key="frame" x="8" y="532" width="281" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellAccessoryWhite" translatesAutoresizingMaskIntoConstraints="NO" id="XGr-nx-KqV">
+                    <rect key="frame" x="294" y="534" width="10" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="0So-hb-t1F"/>
+                        <constraint firstAttribute="width" constant="10" id="Gip-TA-3k9"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rvI-Ce-Zr1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3aB-KR-tTh"/>
+                <constraint firstAttribute="trailing" secondItem="rvI-Ce-Zr1" secondAttribute="trailing" id="6CL-9h-rwR"/>
+                <constraint firstItem="461-ni-PAX" firstAttribute="top" secondItem="rvI-Ce-Zr1" secondAttribute="bottom" id="9S3-Nt-YSt"/>
+                <constraint firstAttribute="bottom" secondItem="dAi-OI-vOK" secondAttribute="bottom" constant="15" id="Iyw-Hh-gVa"/>
+                <constraint firstAttribute="bottom" secondItem="XGr-nx-KqV" secondAttribute="bottom" constant="18" id="JOm-iY-ZRE"/>
+                <constraint firstItem="V7V-5a-ivH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="14" id="Jkx-ea-6RN"/>
+                <constraint firstAttribute="trailing" secondItem="XGr-nx-KqV" secondAttribute="trailing" constant="16" id="QzD-Gv-x60"/>
+                <constraint firstItem="dAi-OI-vOK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="RDr-Ku-4Ar"/>
+                <constraint firstAttribute="trailing" secondItem="461-ni-PAX" secondAttribute="trailing" id="Tlb-8E-Bnh"/>
+                <constraint firstItem="461-ni-PAX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bip-Ip-2Xz"/>
+                <constraint firstItem="XGr-nx-KqV" firstAttribute="leading" secondItem="dAi-OI-vOK" secondAttribute="trailing" constant="5" id="eL8-T9-9Cp"/>
+                <constraint firstAttribute="bottom" secondItem="461-ni-PAX" secondAttribute="bottom" id="fhn-Ll-uHO"/>
+                <constraint firstAttribute="bottom" secondItem="V7V-5a-ivH" secondAttribute="bottom" constant="15" id="p5m-Gp-aC3"/>
+                <constraint firstAttribute="trailing" secondItem="V7V-5a-ivH" secondAttribute="trailing" constant="13" id="tDO-Pj-CrE"/>
+                <constraint firstItem="rvI-Ce-Zr1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yZH-yN-lNi"/>
+                <constraint firstItem="dAi-OI-vOK" firstAttribute="top" secondItem="rvI-Ce-Zr1" secondAttribute="bottom" constant="14" id="z3x-ly-wFx"/>
+            </constraints>
             <point key="canvasLocation" x="249" y="378"/>
         </view>
     </objects>
+    <resources>
+        <image name="cellAccessoryWhite" width="15" height="24"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
