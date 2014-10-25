@@ -8,12 +8,17 @@
 
 import UIKit
 
-class FLOrderViewController: FLBaseViewController {
+class FLOrderViewController: FLBaseViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    var order: [FLDishEntity] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        order.append(FLDishEntity(dishName: "Bla bla", dishDescription: "gd", dishImageURL: "coctailImage", dishPrice: 15.5, dishCategory: "sad"))
 
-        // Do any additional setup after loading the view.
+        self.tableView.registerNib(UINib(nibName: "FLOrderCell", bundle: nil), forCellReuseIdentifier: "FLOrderCell");
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +26,26 @@ class FLOrderViewController: FLBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return order.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("FLOrderCell", forIndexPath: indexPath) as FLOrderCell
+        
+        if indexPath.row == 1 {
+            cell.enableSetCount = false
+        }
+        
+        cell.fillWithDish(order[indexPath.row])
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     /*
     // MARK: - Navigation
 

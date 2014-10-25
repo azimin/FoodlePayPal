@@ -87,6 +87,10 @@ class FLMenuViewController: FLBaseViewController, UITableViewDelegate, UITableVi
         }
         orderPriceLabel.text = "\(sum)$"
     }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
 
     /*
     // MARK: - Navigation
@@ -98,7 +102,9 @@ class FLMenuViewController: FLBaseViewController, UITableViewDelegate, UITableVi
     }
     */
     @IBAction func goToOrderButtonAction(sender: UIButton) {
-        
+        let restauerantsVC = FLOrderViewController(nibName: "FLOrderViewController", bundle: nil)
+        restauerantsVC.order = order
+        self.navigationController?.pushViewController(restauerantsVC, animated: true)
     }
 
 }

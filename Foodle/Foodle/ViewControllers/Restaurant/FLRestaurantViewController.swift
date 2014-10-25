@@ -103,6 +103,9 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let restauerantsVC = FLOrderViewController(nibName: "FLOrderViewController", bundle: nil)
+        self.navigationController?.pushViewController(restauerantsVC, animated: true)
     }
     
     func updateData() {
@@ -113,6 +116,10 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
         }
         
         tableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     // MARK: - Action
