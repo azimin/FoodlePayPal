@@ -5,11 +5,11 @@
 //  Created by Alex Zimin on 25/10/14.
 //  Copyright (c) 2014 Foodlle. All rights reserved.
 //
-
+#define kbroadCastBeacon 1
 #import "AppDelegate.h"
-
+#import "FLBeaconBroadcaster.h"
 @interface AppDelegate ()
-
+@property FLBeaconBroadcaster *broadcaster;
 @end
 
 @implementation AppDelegate
@@ -17,6 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+	if (kbroadCastBeacon) {
+		self.broadcaster = [FLBeaconBroadcaster new];
+		[self.broadcaster broadCastBeacon];
+	}
+	
     return YES;
 }
 

@@ -21,6 +21,13 @@
 		92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */; };
 		92CBB43419FBA7B7000E5732 /* FLRestaurantsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */; };
 		92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */; };
+		A566AD2F19FBA9B7000D3066 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD2E19FBA9B7000D3066 /* CoreBluetooth.framework */; };
+		A566AD3119FBA9DD000D3066 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3019FBA9DD000D3066 /* CoreLocation.framework */; };
+		A566AD3319FBA9F4000D3066 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3219FBA9F4000D3066 /* MobileCoreServices.framework */; };
+		A566AD3519FBAA06000D3066 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3419FBAA06000D3066 /* CFNetwork.framework */; };
+		A566AD3719FBAA6E000D3066 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3619FBAA6E000D3066 /* CoreGraphics.framework */; };
+		A566AD3919FBAA75000D3066 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3819FBAA75000D3066 /* UIKit.framework */; };
+		A566AD3D19FBAAAC000D3066 /* FLBeaconBroadcaster.m in Sources */ = {isa = PBXBuildFile; fileRef = A566AD3C19FBAAAC000D3066 /* FLBeaconBroadcaster.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +53,14 @@
 		92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLRestaurantsViewController.swift; path = ViewControllers/Restaurants/FLRestaurantsViewController.swift; sourceTree = "<group>"; };
 		92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLRestaurantsViewController.xib; path = ViewControllers/Restaurants/FLRestaurantsViewController.xib; sourceTree = "<group>"; };
 		92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLBaseNavigationController.swift; path = ViewControllers/Base/FLBaseNavigationController.swift; sourceTree = "<group>"; };
+		A566AD2E19FBA9B7000D3066 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		A566AD3019FBA9DD000D3066 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A566AD3219FBA9F4000D3066 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A566AD3419FBAA06000D3066 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A566AD3619FBAA6E000D3066 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A566AD3819FBAA75000D3066 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A566AD3B19FBAAAC000D3066 /* FLBeaconBroadcaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLBeaconBroadcaster.h; sourceTree = "<group>"; };
+		A566AD3C19FBAAAC000D3066 /* FLBeaconBroadcaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLBeaconBroadcaster.m; sourceTree = "<group>"; };
 		FC060073648A666DD1C33A9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -54,6 +69,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A566AD3919FBAA75000D3066 /* UIKit.framework in Frameworks */,
+				A566AD3719FBAA6E000D3066 /* CoreGraphics.framework in Frameworks */,
+				A566AD3519FBAA06000D3066 /* CFNetwork.framework in Frameworks */,
+				A566AD3319FBA9F4000D3066 /* MobileCoreServices.framework in Frameworks */,
+				A566AD3119FBA9DD000D3066 /* CoreLocation.framework in Frameworks */,
+				A566AD2F19FBA9B7000D3066 /* CoreBluetooth.framework in Frameworks */,
 				74727842FDA851B1A621A8E8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +92,12 @@
 		55A9A3B9F71BF4F77D5D9BD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A566AD3819FBAA75000D3066 /* UIKit.framework */,
+				A566AD3619FBAA6E000D3066 /* CoreGraphics.framework */,
+				A566AD3419FBAA06000D3066 /* CFNetwork.framework */,
+				A566AD3219FBA9F4000D3066 /* MobileCoreServices.framework */,
+				A566AD3019FBA9DD000D3066 /* CoreLocation.framework */,
+				A566AD2E19FBA9B7000D3066 /* CoreBluetooth.framework */,
 				FC060073648A666DD1C33A9A /* libPods.a */,
 			);
 			name = Frameworks;
@@ -132,6 +159,7 @@
 				92CBB40719FBA657000E5732 /* AppDelegate.h */,
 				92CBB40819FBA657000E5732 /* AppDelegate.m */,
 				92CBB40A19FBA657000E5732 /* ViewController.h */,
+				A566AD3A19FBAA8F000D3066 /* BroadCasting */,
 				92CBB40B19FBA657000E5732 /* ViewController.m */,
 				92CBB40D19FBA657000E5732 /* Main.storyboard */,
 				92CBB41019FBA657000E5732 /* Images.xcassets */,
@@ -182,6 +210,15 @@
 				92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */,
 			);
 			name = Restaurants;
+			sourceTree = "<group>";
+		};
+		A566AD3A19FBAA8F000D3066 /* BroadCasting */ = {
+			isa = PBXGroup;
+			children = (
+				A566AD3B19FBAAAC000D3066 /* FLBeaconBroadcaster.h */,
+				A566AD3C19FBAAAC000D3066 /* FLBeaconBroadcaster.m */,
+			);
+			name = BroadCasting;
 			sourceTree = "<group>";
 		};
 		F81A08115F68273A4859CC52 /* Pods */ = {
@@ -244,9 +281,15 @@
 				TargetAttributes = {
 					92CBB3D619FBA574000E5732 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					92CBB40019FBA657000E5732 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = H4T5NA996X;
 					};
 				};
 			};
@@ -341,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A566AD3D19FBAAAC000D3066 /* FLBeaconBroadcaster.m in Sources */,
 				92CBB40C19FBA657000E5732 /* ViewController.m in Sources */,
 				92CBB40919FBA657000E5732 /* AppDelegate.m in Sources */,
 				92CBB40619FBA657000E5732 /* main.m in Sources */,
@@ -460,7 +504,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Foodle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Foodle/Foodle-Bridging-Header.h";
@@ -474,7 +521,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = Foodle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Foodle/Foodle-Bridging-Header.h";
@@ -486,13 +536,17 @@
 			baseConfigurationReference = 5B9F58D8B17A7DA5120BB25A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = FoodModels/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -501,9 +555,13 @@
 			baseConfigurationReference = 5B9F58D8B17A7DA5120BB25A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FoodModels/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -535,6 +593,7 @@
 				92CBB42319FBA657000E5732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
