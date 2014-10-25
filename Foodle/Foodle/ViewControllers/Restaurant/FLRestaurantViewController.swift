@@ -104,8 +104,19 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        let restauerantsVC = FLOrderViewController(nibName: "FLOrderViewController", bundle: nil)
-        self.navigationController?.pushViewController(restauerantsVC, animated: true)
+        let type = cells[indexPath.section]
+        
+        if type == .ButtonsCells {
+            if (indexPath.row == 0) {
+                let restauerantsVC = FLMenuViewController(nibName: "FLMenuViewController", bundle: nil)
+                self.navigationController?.pushViewController(restauerantsVC, animated: true)
+            } else if (indexPath.row == 1) {
+                let restauerantsVC = FLOrderViewController(nibName: "FLOrderViewController", bundle: nil)
+                self.navigationController?.pushViewController(restauerantsVC, animated: true)
+            }
+        }
+        
+        
     }
     
     func updateData() {
@@ -124,6 +135,10 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
 
     // MARK: - Action
     @IBAction func buttonAction(sender: UIButton) {
+        if (tableNumber != nil) {
+            return
+        }
+        
         let alertView = UIAlertView(title: "", message: "Enter number of your table", delegate: self, cancelButtonTitle: "Cancel", otherButtonTitles: "Select")
         alertView.alertViewStyle = .PlainTextInput
         alertView.show()

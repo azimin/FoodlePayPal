@@ -10,8 +10,18 @@ import UIKit
 
 class FLUserEntity: NSObject {
     var userName = ""
-    var userBill = 0.0
+    var userBill: CGFloat = 0.0
     var userNewDishes = 0
-    var userTable: Int?
+    var userTable = 0
     
+    override init() {
+        
+    }
+    
+    init(userName: String, userBill: CGFloat, userNewDishes: Int, userTable: Int) {
+        self.userName = userName
+        self.userBill = userBill
+        self.userNewDishes = userNewDishes
+        self.userTable = userTable
+    }
 }

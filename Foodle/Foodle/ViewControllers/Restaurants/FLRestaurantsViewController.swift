@@ -69,7 +69,7 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        let restauerantsVC = FLOrderViewController(nibName: "FLOrderViewController", bundle: nil)
+        let restauerantsVC = FLRestaurantViewController(nibName: "FLRestaurantViewController", bundle: nil)
         self.navigationController?.pushViewController(restauerantsVC, animated: true)
     }
 }

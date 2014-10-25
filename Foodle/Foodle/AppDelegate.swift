@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        Parse.setApplicationId("NlFtrOa1uDCQd8uBgglTAWJpVNFZCQduxeLqiSsf", clientKey: "EWmFPAuHaFqP6hXI3W65r3WLTsYPvn6ObXFyVjmN")
+        let type: UIUserNotificationType = UIUserNotificationType(UIUserNotificationType.Alert.rawValue | UIUserNotificationType.Badge.rawValue | UIUserNotificationType.Sound.rawValue)
+        let set = NSSet(array: [registerForNotifiactionCategory()])
+        let settings = UIUserNotificationSettings(forTypes: type, categories: set)
+        application.registerUserNotificationSettings(settings)
+        application.registerForRemoteNotifications()
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window.makeKeyAndVisible()
         
@@ -49,6 +56,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    // MARK: - Push
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        let currentInstallation = PFInstallation.currentInstallation()
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.channels = ["Bill", "Info"]
+        currentInstallation.saveInBackgroundWithBlock(nil)
+        println(currentInstallation.installationId)
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        PFPush.handlePush(userInfo)
+        
+        println(userInfo)
+        // {"alert": "Your bill is 23.5$", "category" : "BILL_PAY"}
+        //  "path": 1
+        if let action = userInfo["path"]?.integerValue {
+            if (action == 1) {
+            } else if (action == 2) {
+            }
+        }
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        if identifier == nil {
+            return
+        }
+        
+        if (identifier == "ACTION_PAY") {
+            println("pay")
+            completionHandler()
+        } else if (identifier == "ACTION_INFO") {
+            completionHandler()
+        }
+    }
+    
+    // MARK: - Additional
 
     func apperance() {
         var textAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(),
@@ -58,6 +103,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "navBar"), forBarMetrics: UIBarMetrics.Default)
+    }
+    
+    func registerForNotifiactionCategory() -> UIMutableUserNotificationCategory {
+        let action1 = UIMutableUserNotificationAction()
+        action1.activationMode = UIUserNotificationActivationMode.Background
+        action1.title = "Pay"
+        action1.identifier = "ACTION_PAY"
+        action1.destructive = true
+        action1.authenticationRequired = true
+        
+        let action2 = UIMutableUserNotificationAction()
+        action2.activationMode = UIUserNotificationActivationMode.Foreground
+        action2.title = "Show"
+        action2.identifier = "ACTION_INFO"
+        action2.destructive = false
+        action2.authenticationRequired = false
+        
+        let actionCategory = UIMutableUserNotificationCategory()
+        actionCategory.identifier = "BILL_PAY"
+        actionCategory.setActions([action1, action2], forContext: UIUserNotificationActionContext.Default)
+        return actionCategory
     }
 
 }

@@ -41,8 +41,19 @@ class FLGuestCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func fillWithUser() {
+    func fillWithUser(user: FLUserEntity) {
+        tableNumberLabel.text = "\(user.userTable)"
+        guestNameLabel.text = user.userName
+        nameConstraint.constant = textWidth(user.userName, guestNameLabel.font)
         
+        if (user.userNewDishes > 0) {
+            self.newOrdersBGView.hidden = false
+            newOrdersLabel.text = "\(user.userNewDishes)"
+        } else {
+            self.newOrdersBGView.hidden = true
+        }
+        
+        priceLabel.text = "\(user.userBill)$"
     }
     
     @IBAction func acceptButtonAction(sender: UIButton) {

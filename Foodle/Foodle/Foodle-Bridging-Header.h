@@ -6,3 +6,4 @@
 #import "FrameAccessor.h"
 
 #import "UIFont+FLFont.h"
+#import <Parse/Parse.h>

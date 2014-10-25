@@ -8,6 +8,11 @@
 
 import UIKit
 
+func textWidth(str: NSString, font: UIFont) -> CGFloat {
+    var size = CGSizeMake(CGFloat.max, font.pointSize + 2)
+    return str.boundingRectWithSize(size, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil).size.width + 2
+}
+
 func textHeight(str: String, font: UIFont, width: CGFloat) -> CGFloat {
     let atributedString = NSAttributedString(string: str, attributes: [NSFontAttributeName: font])
     return attributedTextHeight(atributedString, width)
