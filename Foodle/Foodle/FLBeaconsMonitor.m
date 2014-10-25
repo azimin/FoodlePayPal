@@ -36,7 +36,7 @@
 		
 	}
 	[self.locationManager startMonitoringForRegion:self.beaconRegion];
-	//[self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+	[self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status	 {
