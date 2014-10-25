@@ -37,6 +37,7 @@
 		92CBB40E19FBA657000E5732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92CBB41019FBA657000E5732 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		92CBB41319FBA657000E5732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		92CBB42919FBA6A2000E5732 /* Foodle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Foodle-Bridging-Header.h"; sourceTree = "<group>"; };
 		FC060073648A666DD1C33A9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,8 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				92CBB3DC19FBA574000E5732 /* AppDelegate.swift */,
+				92CBB42819FBA68B000E5732 /* Core */,
+				92CBB42719FBA685000E5732 /* Controllers */,
 				92CBB3FC19FBA582000E5732 /* Resources */,
 				92CBB3DA19FBA574000E5732 /* Supporting Files */,
+				92CBB42919FBA6A2000E5732 /* Foodle-Bridging-Header.h */,
 			);
 			path = Foodle;
 			sourceTree = "<group>";
@@ -136,6 +140,20 @@
 				92CBB40519FBA657000E5732 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		92CBB42719FBA685000E5732 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		92CBB42819FBA68B000E5732 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		F81A08115F68273A4859CC52 /* Pods */ = {
@@ -408,9 +426,12 @@
 			baseConfigurationReference = 5B9F58D8B17A7DA5120BB25A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Foodle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Foodle/Foodle-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -419,9 +440,11 @@
 			baseConfigurationReference = 286CB336AE9E647C5C96382E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Foodle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Foodle/Foodle-Bridging-Header.h";
 			};
 			name = Release;
 		};
