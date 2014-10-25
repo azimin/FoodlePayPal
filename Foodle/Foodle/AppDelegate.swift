@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let restauerantsVC = FLRestaurantsViewController(nibName: "FLRestaurantsViewController", bundle: nil)
-        let navigation = FLBaseNavigationController(rootV)
         
         return true
     }
