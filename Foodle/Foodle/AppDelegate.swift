@@ -45,9 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window.makeKeyAndVisible()
         
-        let restauerantsVC = FLGuestViewController(nibName: "FLGuestViewController", bundle: nil)
+        let restauerantsVC = FLUserInfoViewController(nibName: "FLUserInfoViewController", bundle: nil)
         let navigationVC = FLBaseNavigationController(rootViewController: restauerantsVC)
-        restauerantsVC.title = "\(launchOptions)"
 
         window.rootViewController = navigationVC
         

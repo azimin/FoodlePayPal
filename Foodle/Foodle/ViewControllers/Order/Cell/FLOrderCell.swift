@@ -19,6 +19,20 @@ class FLOrderCell: UITableViewCell {
     
     @IBOutlet weak var tapToEditConstraint: NSLayoutConstraint!
     
+    var isWeiter: Bool = false {
+        didSet {
+            progressView.progress = 0.0
+            timeLeftLabel.text = "Tap to set time"
+        }
+    }
+    
+    var isReady: Bool = false {
+        didSet {
+            progressView.progress = 1.0
+            timeLeftLabel.text = "Dish is ready"
+        }
+    }
+    
     var enableSetCount: Bool = true {
         didSet {
             tapToEditConstraint.constant = (enableSetCount) ? 18 : 0
