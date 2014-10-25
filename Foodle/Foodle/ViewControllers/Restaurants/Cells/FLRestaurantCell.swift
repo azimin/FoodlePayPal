@@ -12,7 +12,6 @@ class FLRestaurantCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var recomendationsLabel: UILabel!
     
     @IBOutlet weak var restaurantImage: UIImageView!
     @IBOutlet weak var stateIconImage: UIImageView!
@@ -39,7 +38,8 @@ class FLRestaurantCell: UITableViewCell {
     func fillWithRestaurant(restaurant: FLRestaurantEntity) {
         nameLabel.text = restaurant.restaurantName
         descriptionLabel.text = restaurant.restaurantDescription
-        recomendationsLabel.text = "sadjsajk jksad jksaj djas jkdjkas jdksa jkdjkajks djsa djkasjkd"
+        //recomendationsLabel.text = "sadjsajk jksad jksaj djas jkdjkas jdksa jkdjkajks djsa djkasjkd"
+        descriptionLabel.text? += "\nsadjsajk jksad jksaj djas jkdjkas jdksa jkdjkajks djsa djkasjkd"
         
         if restaurant.isIBecacon {
             stateIconImage.image = UIImage(named: "bluetoothIcon")

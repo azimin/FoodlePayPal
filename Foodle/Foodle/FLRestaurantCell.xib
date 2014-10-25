@@ -17,7 +17,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="100" verticalHuggingPriority="100" horizontalCompressionResistancePriority="100" verticalCompressionResistancePriority="100" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-kl-HSH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                     </imageView>
-                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hg3-XX-NjJ">
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hg3-XX-NjJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -31,13 +31,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srk-xJ-DWa">
-                        <rect key="frame" x="8" y="24" width="274" height="23.5"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                        <color key="textColor" white="0.93999999999999995" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-1s-U0L">
-                        <rect key="frame" x="8" y="47" width="274" height="18.5"/>
+                        <rect key="frame" x="8" y="24" width="274" height="39"/>
                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                         <color key="textColor" white="0.93999999999999995" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -52,16 +46,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="hTY-oG-KmW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-5" id="1yk-Fh-ItT"/>
-                    <constraint firstItem="4bY-1s-U0L" firstAttribute="top" secondItem="Srk-xJ-DWa" secondAttribute="bottom" constant="-0.5" id="8OA-kY-zgf"/>
                     <constraint firstItem="4qp-i3-s0V" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="9cK-b8-lZC"/>
                     <constraint firstItem="Srk-xJ-DWa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="9qn-kb-UyW"/>
                     <constraint firstItem="hTY-oG-KmW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="BfK-Ce-UrG"/>
                     <constraint firstItem="Hg3-XX-NjJ" firstAttribute="top" secondItem="LO2-kl-HSH" secondAttribute="top" id="Ble-OW-iak"/>
                     <constraint firstItem="LO2-kl-HSH" firstAttribute="height" secondItem="Hg3-XX-NjJ" secondAttribute="height" id="Ccw-2M-UCO"/>
-                    <constraint firstItem="4bY-1s-U0L" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-30" id="DSN-ry-ucl"/>
                     <constraint firstItem="hTY-oG-KmW" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-30" id="JaM-bd-gSj"/>
                     <constraint firstAttribute="trailingMargin" secondItem="LO2-kl-HSH" secondAttribute="trailing" constant="-8" id="KMv-6g-XhM"/>
-                    <constraint firstItem="4bY-1s-U0L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="TMi-NK-3mc"/>
+                    <constraint firstItem="Srk-xJ-DWa" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Q4I-qo-Drh"/>
                     <constraint firstItem="Hg3-XX-NjJ" firstAttribute="leading" secondItem="LO2-kl-HSH" secondAttribute="leading" id="WmG-SQ-hCz"/>
                     <constraint firstItem="LO2-kl-HSH" firstAttribute="width" secondItem="Hg3-XX-NjJ" secondAttribute="width" id="a4Y-6m-l9P"/>
                     <constraint firstItem="Srk-xJ-DWa" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-30" id="aBj-hZ-m2L"/>
@@ -69,7 +61,6 @@
                     <constraint firstAttribute="centerY" secondItem="4qp-i3-s0V" secondAttribute="centerY" id="d2O-i0-79x"/>
                     <constraint firstItem="LO2-kl-HSH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="dDV-mc-utq"/>
                     <constraint firstAttribute="bottomMargin" secondItem="LO2-kl-HSH" secondAttribute="bottom" constant="-8" id="deP-GV-wXf"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="4bY-1s-U0L" secondAttribute="bottom" constant="-3" id="vnW-1s-wv4"/>
                     <constraint firstItem="LO2-kl-HSH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="zmq-0J-lL2"/>
                 </constraints>
             </tableViewCellContentView>
@@ -77,7 +68,6 @@
                 <outlet property="backgroundImage" destination="Hg3-XX-NjJ" id="wqk-dq-7zZ"/>
                 <outlet property="descriptionLabel" destination="Srk-xJ-DWa" id="mOv-VY-BYr"/>
                 <outlet property="nameLabel" destination="hTY-oG-KmW" id="el1-N5-YH5"/>
-                <outlet property="recomendationsLabel" destination="4bY-1s-U0L" id="9eF-RA-Vfn"/>
                 <outlet property="restaurantImage" destination="LO2-kl-HSH" id="Ww8-vw-21m"/>
                 <outlet property="stateIconImage" destination="4qp-i3-s0V" id="a3Z-EU-nad"/>
             </connections>
