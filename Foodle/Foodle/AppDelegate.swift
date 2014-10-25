@@ -12,9 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow!
-
+    
+    var broadcaster: FLBeaconBroadcaster!
+    var paymentsManager: FLPaymentsManager!
+    var monitor: FLBeaconsMonitor!
+    var kbroadCastBeacon = true
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        // PARSE
         Parse.setApplicationId("NlFtrOa1uDCQd8uBgglTAWJpVNFZCQduxeLqiSsf", clientKey: "EWmFPAuHaFqP6hXI3W65r3WLTsYPvn6ObXFyVjmN")
         let type: UIUserNotificationType = UIUserNotificationType(UIUserNotificationType.Alert.rawValue | UIUserNotificationType.Badge.rawValue | UIUserNotificationType.Sound.rawValue)
         let set = NSSet(array: [registerForNotifiactionCategory()])
@@ -22,6 +28,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
         
+        // BEACONS
+        if (kbroadCastBeacon) {
+            self.broadcaster = FLBeaconBroadcaster()
+            self.broadcaster.broadCastBeacon();
+        } else {
+            self.monitor = FLBeaconsMonitor()
+        }
+        self.paymentsManager = FLPaymentsManager()
+        
+        // WINDOW
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window.makeKeyAndVisible()
         

@@ -7,3 +7,7 @@
 
 #import "UIFont+FLFont.h"
 #import <Parse/Parse.h>
+
+#import "FLBeaconBroadcaster.h"
+#import "FLPaymentsManager.h"
+#import "FLBeaconsMonitor.h"
