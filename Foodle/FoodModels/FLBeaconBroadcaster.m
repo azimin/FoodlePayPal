@@ -23,7 +23,7 @@
 	
 }
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
-		NSMutableDictionary *data = [[[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"EBEFD083-70A2-47C8-9837-E7B5634DF524"] identifier:@"com.findaseat"] peripheralDataWithMeasuredPower:nil];
+		NSMutableDictionary *data = [[[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:@"EBEFD083-70A2-47C8-9837-E7B5634DF524"] identifier:beaconID] peripheralDataWithMeasuredPower:nil];
 		[self.pManager startAdvertising:data];
 }
 

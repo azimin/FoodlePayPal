@@ -21,6 +21,7 @@
 		92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */; };
 		92CBB43419FBA7B7000E5732 /* FLRestaurantsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */; };
 		92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */; };
+		A504C7B919FBB0C50099A7C5 /* FLBeaconsMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A504C7B819FBB0C50099A7C5 /* FLBeaconsMonitor.m */; };
 		A566AD2F19FBA9B7000D3066 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD2E19FBA9B7000D3066 /* CoreBluetooth.framework */; };
 		A566AD3119FBA9DD000D3066 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3019FBA9DD000D3066 /* CoreLocation.framework */; };
 		A566AD3319FBA9F4000D3066 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A566AD3219FBA9F4000D3066 /* MobileCoreServices.framework */; };
@@ -53,6 +54,8 @@
 		92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLRestaurantsViewController.swift; path = ViewControllers/Restaurants/FLRestaurantsViewController.swift; sourceTree = "<group>"; };
 		92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLRestaurantsViewController.xib; path = ViewControllers/Restaurants/FLRestaurantsViewController.xib; sourceTree = "<group>"; };
 		92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLBaseNavigationController.swift; path = ViewControllers/Base/FLBaseNavigationController.swift; sourceTree = "<group>"; };
+		A504C7B719FBB0C50099A7C5 /* FLBeaconsMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLBeaconsMonitor.h; sourceTree = "<group>"; };
+		A504C7B819FBB0C50099A7C5 /* FLBeaconsMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLBeaconsMonitor.m; sourceTree = "<group>"; };
 		A566AD2E19FBA9B7000D3066 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		A566AD3019FBA9DD000D3066 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A566AD3219FBA9F4000D3066 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -159,7 +162,7 @@
 				92CBB40719FBA657000E5732 /* AppDelegate.h */,
 				92CBB40819FBA657000E5732 /* AppDelegate.m */,
 				92CBB40A19FBA657000E5732 /* ViewController.h */,
-				A566AD3A19FBAA8F000D3066 /* BroadCasting */,
+				A504C7B619FBB0AD0099A7C5 /* Beacons */,
 				92CBB40B19FBA657000E5732 /* ViewController.m */,
 				92CBB40D19FBA657000E5732 /* Main.storyboard */,
 				92CBB41019FBA657000E5732 /* Images.xcassets */,
@@ -210,6 +213,16 @@
 				92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */,
 			);
 			name = Restaurants;
+			sourceTree = "<group>";
+		};
+		A504C7B619FBB0AD0099A7C5 /* Beacons */ = {
+			isa = PBXGroup;
+			children = (
+				A566AD3A19FBAA8F000D3066 /* BroadCasting */,
+				A504C7B719FBB0C50099A7C5 /* FLBeaconsMonitor.h */,
+				A504C7B819FBB0C50099A7C5 /* FLBeaconsMonitor.m */,
+			);
+			name = Beacons;
 			sourceTree = "<group>";
 		};
 		A566AD3A19FBAA8F000D3066 /* BroadCasting */ = {
@@ -290,6 +303,11 @@
 					92CBB40019FBA657000E5732 = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = H4T5NA996X;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -385,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A566AD3D19FBAAAC000D3066 /* FLBeaconBroadcaster.m in Sources */,
+				A504C7B919FBB0C50099A7C5 /* FLBeaconsMonitor.m in Sources */,
 				92CBB40C19FBA657000E5732 /* ViewController.m in Sources */,
 				92CBB40919FBA657000E5732 /* AppDelegate.m in Sources */,
 				92CBB40619FBA657000E5732 /* main.m in Sources */,
