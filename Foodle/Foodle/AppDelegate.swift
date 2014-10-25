@@ -11,14 +11,19 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.makeKeyAndVisible()
+        window.makeKeyAndVisible()
         
         let restauerantsVC = FLRestaurantsViewController(nibName: "FLRestaurantsViewController", bundle: nil)
+        let navigationVC = FLBaseNavigationController(rootViewController: restauerantsVC)
+
+        window.rootViewController = navigationVC
+        
+        apperance()
         
         return true
     }
@@ -45,6 +50,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func apperance() {
+        var textAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+                              NSFontAttributeName: UIFont.mainFontWithSize(18)]
+        UINavigationBar.appearance().titleTextAttributes = textAttributes
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "navBar"), forBarMetrics: UIBarMetrics.Default)
+
+//        NSDictionary *textAttributes;
+//        
+//        if ([UIDevice isDevicePad]) {
+//            textAttributes = @{ NSForegroundColorAttributeName:[UIColor whiteColor],
+//                NSFontAttributeName:[UIFont headerFontWithSize: 24.0]};
+//        }
+//        else {
+//            textAttributes = @{ NSForegroundColorAttributeName:[UIColor whiteColor],
+//                NSFontAttributeName:[UIFont headerFontWithSize: 17.0]};
+//        }
+//        
+//        [[UINavigationBar appearance] setTitleTextAttributes:textAttributes];
+//        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+//        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//        
+//        [[UINavigationBar appearance] setBackgroundImage:[UIImage imageInBundleNamed:@"bg_blue_nav"]
+//        forBarMetrics:UIBarMetricsDefault];
+    }
 
 }
 

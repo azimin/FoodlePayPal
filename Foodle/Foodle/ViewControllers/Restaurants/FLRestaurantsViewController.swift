@@ -8,12 +8,20 @@
 
 import UIKit
 
-class FLRestaurantsViewController: FLBaseViewController {
+class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var restaurants: [FLRestaurantEntity] = []
+    let identifier = "FLRestaurantCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        restaurants.append(FLRestaurantEntity(restaurantName: "Swag", restaurantDescription: "bla bla bla blabla blabla bla bla bla bla bla bla bla bla blabla blabla bla bla blabla blabla bla bla bla bla blabla blabla blabla bla bla bla bla blabla bla", isIBecacon: true, restaurantImageURL: "test"))
+        restaurants.append(FLRestaurantEntity(restaurantName: "Swag", restaurantDescription: "bla bla bla blabla blabla bla ba", isIBecacon: false, restaurantImageURL: "test"))
+        restaurants.append(FLRestaurantEntity(restaurantName: "Swag", restaurantDescription: "bla bla bla blabla blabla bla bla bla bla bla bla bla bla blabla blabla bla bla blabla blabla bla bla bla bla blabla bla", isIBecacon: false, restaurantImageURL: ""))
+        self.tableView.registerNib(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier);
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +29,35 @@ class FLRestaurantsViewController: FLBaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // MARK: - TableView Data Source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return restaurants.count
+    }
+    
+//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        return UIView(frame: CGRectMake(0, 0, 0, 5))
+//    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as FLRestaurantCell
+        
+        cell.fillWithRestaurant(restaurants[indexPath.section])
+        
+        var needToShow = false
+        if (indexPath.section < 2) {
+            needToShow = true
+        }
+        cell.showImage(needToShow)
+        
+        return cell
+    }
 }

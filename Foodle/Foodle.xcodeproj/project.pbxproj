@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		74727842FDA851B1A621A8E8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC060073648A666DD1C33A9A /* libPods.a */; };
+		92138C3719FBAA9E001F041B /* FLRestaurantEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92138C3619FBAA9E001F041B /* FLRestaurantEntity.swift */; };
+		92138C3B19FBAB64001F041B /* FLRestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92138C3919FBAB64001F041B /* FLRestaurantCell.swift */; };
+		92138C3C19FBAB64001F041B /* FLRestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92138C3A19FBAB64001F041B /* FLRestaurantCell.xib */; };
+		92138C3F19FBABED001F041B /* FrameCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92138C3E19FBABED001F041B /* FrameCalculation.swift */; };
+		92138C4119FBB07E001F041B /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 92138C4019FBB07E001F041B /* test.png */; };
+		92138C4319FBB927001F041B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92138C4219FBB927001F041B /* Font.swift */; };
 		92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB3DC19FBA574000E5732 /* AppDelegate.swift */; };
 		92CBB3E419FBA574000E5732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB3E319FBA574000E5732 /* Images.xcassets */; };
 		92CBB3E719FBA574000E5732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB3E519FBA574000E5732 /* LaunchScreen.xib */; };
@@ -26,6 +32,12 @@
 /* Begin PBXFileReference section */
 		286CB336AE9E647C5C96382E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5B9F58D8B17A7DA5120BB25A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		92138C3619FBAA9E001F041B /* FLRestaurantEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLRestaurantEntity.swift; path = Core/Entities/FLRestaurantEntity.swift; sourceTree = "<group>"; };
+		92138C3919FBAB64001F041B /* FLRestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLRestaurantCell.swift; path = ViewControllers/Restaurants/Cells/FLRestaurantCell.swift; sourceTree = "<group>"; };
+		92138C3A19FBAB64001F041B /* FLRestaurantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLRestaurantCell.xib; path = ViewControllers/Restaurants/Cells/FLRestaurantCell.xib; sourceTree = "<group>"; };
+		92138C3E19FBABED001F041B /* FrameCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameCalculation.swift; sourceTree = "<group>"; };
+		92138C4019FBB07E001F041B /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		92138C4219FBB927001F041B /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Font.swift; path = Third/Font.swift; sourceTree = "<group>"; };
 		92CBB3D719FBA574000E5732 /* Foodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CBB3DB19FBA574000E5732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92CBB3DC19FBA574000E5732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +88,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		92138C3519FBAA70001F041B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				92138C3619FBAA9E001F041B /* FLRestaurantEntity.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		92138C3819FBAB48001F041B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				92138C3919FBAB64001F041B /* FLRestaurantCell.swift */,
+				92138C3A19FBAB64001F041B /* FLRestaurantCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		92138C3D19FBABD7001F041B /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				92138C3E19FBABED001F041B /* FrameCalculation.swift */,
+				92138C4219FBB927001F041B /* Font.swift */,
+			);
+			name = Third;
+			sourceTree = "<group>";
+		};
 		92CBB3CE19FBA574000E5732 = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +137,9 @@
 		92CBB3D919FBA574000E5732 /* Foodle */ = {
 			isa = PBXGroup;
 			children = (
+				92138C4019FBB07E001F041B /* test.png */,
 				92CBB3DC19FBA574000E5732 /* AppDelegate.swift */,
+				92138C3D19FBABD7001F041B /* Third */,
 				92CBB42819FBA68B000E5732 /* Core */,
 				92CBB42719FBA685000E5732 /* ViewControllers */,
 				92CBB3FC19FBA582000E5732 /* Resources */,
@@ -162,6 +202,7 @@
 		92CBB42819FBA68B000E5732 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				92138C3519FBAA70001F041B /* Entities */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -178,6 +219,7 @@
 		92CBB43019FBA79C000E5732 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
+				92138C3819FBAB48001F041B /* Cells */,
 				92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */,
 				92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */,
 			);
@@ -274,6 +316,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92138C3C19FBAB64001F041B /* FLRestaurantCell.xib in Resources */,
+				92138C4119FBB07E001F041B /* test.png in Resources */,
 				92CBB43419FBA7B7000E5732 /* FLRestaurantsViewController.xib in Resources */,
 				92CBB3E719FBA574000E5732 /* LaunchScreen.xib in Resources */,
 				92CBB3E419FBA574000E5732 /* Images.xcassets in Resources */,
@@ -330,9 +374,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92138C3B19FBAB64001F041B /* FLRestaurantCell.swift in Sources */,
+				92138C3719FBAA9E001F041B /* FLRestaurantEntity.swift in Sources */,
 				92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */,
 				92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */,
+				92138C4319FBB927001F041B /* Font.swift in Sources */,
 				92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */,
+				92138C3F19FBABED001F041B /* FrameCalculation.swift in Sources */,
 				92CBB42E19FBA77F000E5732 /* FLBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +583,7 @@
 				92CBB42319FBA657000E5732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
