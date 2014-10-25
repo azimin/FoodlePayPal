@@ -3,7 +3,5 @@
 
 pod 'Colours'
 pod 'FrameAccessor'
-pod 'MBProgressHUD'
 pod 'AFNetworking',  :inhibit_warnings => true
 pod 'MagicalRecord', :inhibit_warnings => true
-
