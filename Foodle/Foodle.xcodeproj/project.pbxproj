@@ -70,6 +70,19 @@
 		92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */; };
 		92CBB43419FBA7B7000E5732 /* FLRestaurantsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */; };
 		92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */; };
+		92D04A9F19FCD7A7009107AA /* DRINKS_BLACK.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9219FCD7A7009107AA /* DRINKS_BLACK.png */; };
+		92D04AA019FCD7A7009107AA /* DRINKS_BLUE.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9319FCD7A7009107AA /* DRINKS_BLUE.png */; };
+		92D04AA119FCD7A7009107AA /* DRINKS_RED.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9419FCD7A7009107AA /* DRINKS_RED.png */; };
+		92D04AA219FCD7A7009107AA /* DRINKS_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9519FCD7A7009107AA /* DRINKS_White.png */; };
+		92D04AA319FCD7A7009107AA /* Hot_burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9619FCD7A7009107AA /* Hot_burger.png */; };
+		92D04AA419FCD7A7009107AA /* HOT_pasta.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9719FCD7A7009107AA /* HOT_pasta.png */; };
+		92D04AA519FCD7A7009107AA /* HOT_pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9819FCD7A7009107AA /* HOT_pizza.png */; };
+		92D04AA619FCD7A7009107AA /* HOT_shaverma.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9919FCD7A7009107AA /* HOT_shaverma.png */; };
+		92D04AA719FCD7A7009107AA /* HOT_steak.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9A19FCD7A7009107AA /* HOT_steak.png */; };
+		92D04AA819FCD7A7009107AA /* HOT_Tartini.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9B19FCD7A7009107AA /* HOT_Tartini.png */; };
+		92D04AA919FCD7A7009107AA /* ZAKUS_Avacado.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9C19FCD7A7009107AA /* ZAKUS_Avacado.png */; };
+		92D04AAA19FCD7A7009107AA /* zakus_Mojej.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9D19FCD7A7009107AA /* zakus_Mojej.png */; };
+		92D04AAB19FCD7A7009107AA /* ZAKUS_Strawberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D04A9E19FCD7A7009107AA /* ZAKUS_Strawberry.png */; };
 		92D6EF7219FBBFBB0082EEE2 /* UIFont+FLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D6EF7119FBBFBB0082EEE2 /* UIFont+FLFont.m */; };
 		92D6EF7619FBC2970082EEE2 /* FLRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6EF7419FBC2970082EEE2 /* FLRestaurantViewController.swift */; };
 		92D6EF7719FBC2970082EEE2 /* FLRestaurantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92D6EF7519FBC2970082EEE2 /* FLRestaurantViewController.xib */; };
@@ -180,6 +193,19 @@
 		92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLRestaurantsViewController.swift; path = ViewControllers/Restaurants/FLRestaurantsViewController.swift; sourceTree = "<group>"; };
 		92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLRestaurantsViewController.xib; path = ViewControllers/Restaurants/FLRestaurantsViewController.xib; sourceTree = "<group>"; };
 		92CBB43519FBA801000E5732 /* FLBaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLBaseNavigationController.swift; path = ViewControllers/Base/FLBaseNavigationController.swift; sourceTree = "<group>"; };
+		92D04A9219FCD7A7009107AA /* DRINKS_BLACK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DRINKS_BLACK.png; sourceTree = "<group>"; };
+		92D04A9319FCD7A7009107AA /* DRINKS_BLUE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DRINKS_BLUE.png; sourceTree = "<group>"; };
+		92D04A9419FCD7A7009107AA /* DRINKS_RED.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DRINKS_RED.png; sourceTree = "<group>"; };
+		92D04A9519FCD7A7009107AA /* DRINKS_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DRINKS_White.png; sourceTree = "<group>"; };
+		92D04A9619FCD7A7009107AA /* Hot_burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hot_burger.png; sourceTree = "<group>"; };
+		92D04A9719FCD7A7009107AA /* HOT_pasta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOT_pasta.png; sourceTree = "<group>"; };
+		92D04A9819FCD7A7009107AA /* HOT_pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOT_pizza.png; sourceTree = "<group>"; };
+		92D04A9919FCD7A7009107AA /* HOT_shaverma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOT_shaverma.png; sourceTree = "<group>"; };
+		92D04A9A19FCD7A7009107AA /* HOT_steak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOT_steak.png; sourceTree = "<group>"; };
+		92D04A9B19FCD7A7009107AA /* HOT_Tartini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOT_Tartini.png; sourceTree = "<group>"; };
+		92D04A9C19FCD7A7009107AA /* ZAKUS_Avacado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZAKUS_Avacado.png; sourceTree = "<group>"; };
+		92D04A9D19FCD7A7009107AA /* zakus_Mojej.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zakus_Mojej.png; sourceTree = "<group>"; };
+		92D04A9E19FCD7A7009107AA /* ZAKUS_Strawberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZAKUS_Strawberry.png; sourceTree = "<group>"; };
 		92D6EF7019FBBFBB0082EEE2 /* UIFont+FLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+FLFont.h"; path = "Third/UIFont+FLFont.h"; sourceTree = "<group>"; };
 		92D6EF7119FBBFBB0082EEE2 /* UIFont+FLFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+FLFont.m"; path = "Third/UIFont+FLFont.m"; sourceTree = "<group>"; };
 		92D6EF7419FBC2970082EEE2 /* FLRestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLRestaurantViewController.swift; path = ViewControllers/Restaurant/FLRestaurantViewController.swift; sourceTree = "<group>"; };
@@ -316,6 +342,19 @@
 		92168A9F19FCC31700EA9BF0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				92D04A9219FCD7A7009107AA /* DRINKS_BLACK.png */,
+				92D04A9319FCD7A7009107AA /* DRINKS_BLUE.png */,
+				92D04A9419FCD7A7009107AA /* DRINKS_RED.png */,
+				92D04A9519FCD7A7009107AA /* DRINKS_White.png */,
+				92D04A9619FCD7A7009107AA /* Hot_burger.png */,
+				92D04A9719FCD7A7009107AA /* HOT_pasta.png */,
+				92D04A9819FCD7A7009107AA /* HOT_pizza.png */,
+				92D04A9919FCD7A7009107AA /* HOT_shaverma.png */,
+				92D04A9A19FCD7A7009107AA /* HOT_steak.png */,
+				92D04A9B19FCD7A7009107AA /* HOT_Tartini.png */,
+				92D04A9C19FCD7A7009107AA /* ZAKUS_Avacado.png */,
+				92D04A9D19FCD7A7009107AA /* zakus_Mojej.png */,
+				92D04A9E19FCD7A7009107AA /* ZAKUS_Strawberry.png */,
 				92168A9519FCC31400EA9BF0 /* LesPhilosophes.jpg */,
 				92168A9619FCC31400EA9BF0 /* PiggyPoint.jpg */,
 				92168A9719FCC31400EA9BF0 /* RockandBurger.jpg */,
@@ -738,22 +777,35 @@
 				92B9917719FC596600E43E08 /* FLPreferenceCell.xib in Resources */,
 				92168A9E19FCC31400EA9BF0 /* TorroGrill.JPG in Resources */,
 				92B9914D19FC3C5000E43E08 /* FLRestaurantCell.xib in Resources */,
+				92D04AA019FCD7A7009107AA /* DRINKS_BLUE.png in Resources */,
 				920DED5119FBFC0800217EE8 /* FLOrderViewController.xib in Resources */,
 				92168A9A19FCC31400EA9BF0 /* LesPhilosophes.jpg in Resources */,
 				92B9912819FC198200E43E08 /* FLGuestViewController.xib in Resources */,
 				92B9917E19FC6F9300E43E08 /* FLBillViewController.xib in Resources */,
+				92D04AA119FCD7A7009107AA /* DRINKS_RED.png in Resources */,
 				92B9919319FC98BD00E43E08 /* FLStartViewController.xib in Resources */,
+				92D04AA919FCD7A7009107AA /* ZAKUS_Avacado.png in Resources */,
 				92168A9C19FCC31400EA9BF0 /* RockandBurger.jpg in Resources */,
 				92D6EF9219FBDE300082EEE2 /* FLMenuViewController.xib in Resources */,
+				92D04AA419FCD7A7009107AA /* HOT_pasta.png in Resources */,
+				92D04A9F19FCD7A7009107AA /* DRINKS_BLACK.png in Resources */,
+				92D04AA519FCD7A7009107AA /* HOT_pizza.png in Resources */,
 				92D6EF9C19FBE4030082EEE2 /* FLDishTableViewCell.xib in Resources */,
+				92D04AAB19FCD7A7009107AA /* ZAKUS_Strawberry.png in Resources */,
+				92D04AA219FCD7A7009107AA /* DRINKS_White.png in Resources */,
 				92B9918A19FC892D00E43E08 /* FLHeaderBillCell.xib in Resources */,
+				92D04AA719FCD7A7009107AA /* HOT_steak.png in Resources */,
 				92D6EF8519FBCB740082EEE2 /* FLRestaurantInfoCell.xib in Resources */,
+				92D04AA819FCD7A7009107AA /* HOT_Tartini.png in Resources */,
 				92168A9D19FCC31400EA9BF0 /* TheGodfather.jpg in Resources */,
+				92D04AA319FCD7A7009107AA /* Hot_burger.png in Resources */,
 				92D6EF8119FBC4540082EEE2 /* FLRestaurantMainCell.xib in Resources */,
 				920DED5619FBFD8B00217EE8 /* FLOrderCell.xib in Resources */,
 				92D6EF7719FBC2970082EEE2 /* FLRestaurantViewController.xib in Resources */,
 				92D6EF8919FBD1280082EEE2 /* FLButtonCell.xib in Resources */,
+				92D04AA619FCD7A7009107AA /* HOT_shaverma.png in Resources */,
 				92168A9B19FCC31400EA9BF0 /* PiggyPoint.jpg in Resources */,
+				92D04AAA19FCD7A7009107AA /* zakus_Mojej.png in Resources */,
 				92B9912D19FC1A8200E43E08 /* FLGuestCell.xib in Resources */,
 				92B9918E19FC893B00E43E08 /* FLBillCell.xib in Resources */,
 				92138C4119FBB07E001F041B /* test.png in Resources */,
