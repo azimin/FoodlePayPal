@@ -13,3 +13,5 @@
 #import "FLBeaconsMonitor.h"
 #import "FLUserRequestsManager.h"
 #import "FLOrderRequestsManager.h"
+
+#import "UIImageView+WebCache.h"

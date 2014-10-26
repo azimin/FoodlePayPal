@@ -59,7 +59,7 @@ class FLStartViewController: FLBaseViewController, FLTutorialButtonDelegate {
     @IBOutlet weak var buttonHeight: NSLayoutConstraint!
     
     @IBAction func goButtonAction(sender: UIButton) {
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     var aFlag = false

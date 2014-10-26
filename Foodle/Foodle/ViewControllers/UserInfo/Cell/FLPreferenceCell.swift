@@ -28,6 +28,10 @@ class FLPreferenceCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func showAccesorise(show: Bool) {
+        
+    }
+    
     func fillWithName(name: String, infoString: String, iconImageName: String) {
         nameLabel.text = name
         infoLabel.text = infoString

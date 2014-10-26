@@ -15,8 +15,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hd9-eu-KN7">
-                        <rect key="frame" x="30" y="11" width="282" height="21"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                        <rect key="frame" x="46" y="11" width="266" height="21"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -34,17 +34,26 @@
                             <constraint firstAttribute="height" constant="16" id="EA0-cn-ImO"/>
                         </constraints>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coctailImage" translatesAutoresizingMaskIntoConstraints="NO" id="Bju-ZX-UBa">
+                        <rect key="frame" x="8" y="7" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="6MX-7e-ol8"/>
+                            <constraint firstAttribute="width" constant="30" id="eS6-eq-7Qj"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="hd9-eu-KN7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Dts-ca-2IZ"/>
-                    <constraint firstItem="hd9-eu-KN7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="22" id="Fbd-nc-kkf"/>
+                    <constraint firstItem="Bju-ZX-UBa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="6AW-wV-NiX"/>
+                    <constraint firstItem="hd9-eu-KN7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="PoO-j4-U7X"/>
+                    <constraint firstItem="hd9-eu-KN7" firstAttribute="leading" secondItem="Bju-ZX-UBa" secondAttribute="trailing" constant="8" id="SLA-9p-mDP"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Jxo-QA-ycv" secondAttribute="bottom" constant="-8" id="V74-jl-CNa"/>
                     <constraint firstItem="Jxo-QA-ycv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="VFV-le-7g9"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="hd9-eu-KN7" secondAttribute="bottom" constant="3.5" id="VHs-Q6-xIi"/>
                     <constraint firstItem="6V4-IR-PSp" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-12" id="Xc0-R6-Gq2"/>
-                    <constraint firstItem="hd9-eu-KN7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="e1h-6r-mAu"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Jxo-QA-ycv" secondAttribute="trailing" constant="-8" id="fZY-88-P1u"/>
+                    <constraint firstItem="Jxo-QA-ycv" firstAttribute="top" secondItem="hd9-eu-KN7" secondAttribute="bottom" constant="11" id="mkN-eW-7cO"/>
+                    <constraint firstItem="hd9-eu-KN7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="pJL-25-x5I"/>
                     <constraint firstAttribute="centerY" secondItem="6V4-IR-PSp" secondAttribute="centerY" id="r9w-Qb-Ltl"/>
+                    <constraint firstItem="Bju-ZX-UBa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="xTd-6Q-Jam"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -56,5 +65,6 @@
     </objects>
     <resources>
         <image name="cellAccesory" width="15" height="24"/>
+        <image name="coctailImage" width="72" height="72"/>
     </resources>
 </document>

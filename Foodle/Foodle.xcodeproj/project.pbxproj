@@ -17,6 +17,11 @@
 		92138C3F19FBABED001F041B /* FrameCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92138C3E19FBABED001F041B /* FrameCalculation.swift */; };
 		92138C4119FBB07E001F041B /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = 92138C4019FBB07E001F041B /* test.png */; };
 		92138C4319FBB927001F041B /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92138C4219FBB927001F041B /* Font.swift */; };
+		92168A9A19FCC31400EA9BF0 /* LesPhilosophes.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92168A9519FCC31400EA9BF0 /* LesPhilosophes.jpg */; };
+		92168A9B19FCC31400EA9BF0 /* PiggyPoint.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92168A9619FCC31400EA9BF0 /* PiggyPoint.jpg */; };
+		92168A9C19FCC31400EA9BF0 /* RockandBurger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92168A9719FCC31400EA9BF0 /* RockandBurger.jpg */; };
+		92168A9D19FCC31400EA9BF0 /* TheGodfather.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 92168A9819FCC31400EA9BF0 /* TheGodfather.jpg */; };
+		92168A9E19FCC31400EA9BF0 /* TorroGrill.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 92168A9919FCC31400EA9BF0 /* TorroGrill.JPG */; };
 		92B9912719FC198200E43E08 /* FLGuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9912519FC198200E43E08 /* FLGuestViewController.swift */; };
 		92B9912819FC198200E43E08 /* FLGuestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92B9912619FC198200E43E08 /* FLGuestViewController.xib */; };
 		92B9912C19FC1A8200E43E08 /* FLGuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9912A19FC1A8200E43E08 /* FLGuestCell.swift */; };
@@ -61,12 +66,6 @@
 		92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB3DC19FBA574000E5732 /* AppDelegate.swift */; };
 		92CBB3E419FBA574000E5732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB3E319FBA574000E5732 /* Images.xcassets */; };
 		92CBB3E719FBA574000E5732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB3E519FBA574000E5732 /* LaunchScreen.xib */; };
-		92CBB40619FBA657000E5732 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB40519FBA657000E5732 /* main.m */; };
-		92CBB40919FBA657000E5732 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB40819FBA657000E5732 /* AppDelegate.m */; };
-		92CBB40C19FBA657000E5732 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB40B19FBA657000E5732 /* ViewController.m */; };
-		92CBB40F19FBA657000E5732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB40D19FBA657000E5732 /* Main.storyboard */; };
-		92CBB41119FBA657000E5732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB41019FBA657000E5732 /* Images.xcassets */; };
-		92CBB41419FBA657000E5732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB41219FBA657000E5732 /* LaunchScreen.xib */; };
 		92CBB42E19FBA77F000E5732 /* FLBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB42D19FBA77F000E5732 /* FLBaseViewController.swift */; };
 		92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB43119FBA7B7000E5732 /* FLRestaurantsViewController.swift */; };
 		92CBB43419FBA7B7000E5732 /* FLRestaurantsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB43219FBA7B7000E5732 /* FLRestaurantsViewController.xib */; };
@@ -106,6 +105,11 @@
 		92138C3E19FBABED001F041B /* FrameCalculation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameCalculation.swift; sourceTree = "<group>"; };
 		92138C4019FBB07E001F041B /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		92138C4219FBB927001F041B /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Font.swift; path = Third/Font.swift; sourceTree = "<group>"; };
+		92168A9519FCC31400EA9BF0 /* LesPhilosophes.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LesPhilosophes.jpg; sourceTree = "<group>"; };
+		92168A9619FCC31400EA9BF0 /* PiggyPoint.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PiggyPoint.jpg; sourceTree = "<group>"; };
+		92168A9719FCC31400EA9BF0 /* RockandBurger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RockandBurger.jpg; sourceTree = "<group>"; };
+		92168A9819FCC31400EA9BF0 /* TheGodfather.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TheGodfather.jpg; sourceTree = "<group>"; };
+		92168A9919FCC31400EA9BF0 /* TorroGrill.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TorroGrill.JPG; sourceTree = "<group>"; };
 		92B9912519FC198200E43E08 /* FLGuestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLGuestViewController.swift; path = ViewControllers/Guest/FLGuestViewController.swift; sourceTree = "<group>"; };
 		92B9912619FC198200E43E08 /* FLGuestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLGuestViewController.xib; path = ViewControllers/Guest/FLGuestViewController.xib; sourceTree = "<group>"; };
 		92B9912A19FC1A8200E43E08 /* FLGuestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLGuestCell.swift; path = ViewControllers/Guest/Cell/FLGuestCell.swift; sourceTree = "<group>"; };
@@ -162,7 +166,6 @@
 		92CBB3DC19FBA574000E5732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92CBB3E319FBA574000E5732 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		92CBB3E619FBA574000E5732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		92CBB40119FBA657000E5732 /* FoodModels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodModels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CBB40419FBA657000E5732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92CBB40519FBA657000E5732 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92CBB40719FBA657000E5732 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -229,13 +232,6 @@
 				74727842FDA851B1A621A8E8 /* libPods.a in Frameworks */,
 				92B9913419FC2ABF00E43E08 /* Parse.framework in Frameworks */,
 				92B9914B19FC2CC800E43E08 /* FacebookSDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92CBB3FE19FBA657000E5732 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +311,18 @@
 				92D6EF7119FBBFBB0082EEE2 /* UIFont+FLFont.m */,
 			);
 			name = Third;
+			sourceTree = "<group>";
+		};
+		92168A9F19FCC31700EA9BF0 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				92168A9519FCC31400EA9BF0 /* LesPhilosophes.jpg */,
+				92168A9619FCC31400EA9BF0 /* PiggyPoint.jpg */,
+				92168A9719FCC31400EA9BF0 /* RockandBurger.jpg */,
+				92168A9819FCC31400EA9BF0 /* TheGodfather.jpg */,
+				92168A9919FCC31400EA9BF0 /* TorroGrill.JPG */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		929F700619FC18A300A815A4 /* Gusts */ = {
@@ -445,7 +453,6 @@
 			isa = PBXGroup;
 			children = (
 				92CBB3D719FBA574000E5732 /* Foodle.app */,
-				92CBB40119FBA657000E5732 /* FoodModels.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -453,6 +460,7 @@
 		92CBB3D919FBA574000E5732 /* Foodle */ = {
 			isa = PBXGroup;
 			children = (
+				92168A9F19FCC31700EA9BF0 /* Images */,
 				92D6EF9319FBDE6D0082EEE2 /* View */,
 				92CBB3DC19FBA574000E5732 /* AppDelegate.swift */,
 				92138C3D19FBABD7001F041B /* Third */,
@@ -683,23 +691,6 @@
 			productReference = 92CBB3D719FBA574000E5732 /* Foodle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		92CBB40019FBA657000E5732 /* FoodModels */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 92CBB42119FBA657000E5732 /* Build configuration list for PBXNativeTarget "FoodModels" */;
-			buildPhases = (
-				92CBB3FD19FBA657000E5732 /* Sources */,
-				92CBB3FE19FBA657000E5732 /* Frameworks */,
-				92CBB3FF19FBA657000E5732 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FoodModels;
-			productName = FoodModels;
-			productReference = 92CBB40119FBA657000E5732 /* FoodModels.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -712,15 +703,12 @@
 				TargetAttributes = {
 					92CBB3D619FBA574000E5732 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = H4T5NA996X;
+						DevelopmentTeam = 5MGEMLZRS4;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 						};
-					};
-					92CBB40019FBA657000E5732 = {
-						CreatedOnToolsVersion = 6.1;
 					};
 				};
 			};
@@ -738,7 +726,6 @@
 			projectRoot = "";
 			targets = (
 				92CBB3D619FBA574000E5732 /* Foodle */,
-				92CBB40019FBA657000E5732 /* FoodModels */,
 			);
 		};
 /* End PBXProject section */
@@ -749,19 +736,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B9917719FC596600E43E08 /* FLPreferenceCell.xib in Resources */,
+				92168A9E19FCC31400EA9BF0 /* TorroGrill.JPG in Resources */,
 				92B9914D19FC3C5000E43E08 /* FLRestaurantCell.xib in Resources */,
 				920DED5119FBFC0800217EE8 /* FLOrderViewController.xib in Resources */,
+				92168A9A19FCC31400EA9BF0 /* LesPhilosophes.jpg in Resources */,
 				92B9912819FC198200E43E08 /* FLGuestViewController.xib in Resources */,
 				92B9917E19FC6F9300E43E08 /* FLBillViewController.xib in Resources */,
 				92B9919319FC98BD00E43E08 /* FLStartViewController.xib in Resources */,
+				92168A9C19FCC31400EA9BF0 /* RockandBurger.jpg in Resources */,
 				92D6EF9219FBDE300082EEE2 /* FLMenuViewController.xib in Resources */,
 				92D6EF9C19FBE4030082EEE2 /* FLDishTableViewCell.xib in Resources */,
 				92B9918A19FC892D00E43E08 /* FLHeaderBillCell.xib in Resources */,
 				92D6EF8519FBCB740082EEE2 /* FLRestaurantInfoCell.xib in Resources */,
+				92168A9D19FCC31400EA9BF0 /* TheGodfather.jpg in Resources */,
 				92D6EF8119FBC4540082EEE2 /* FLRestaurantMainCell.xib in Resources */,
 				920DED5619FBFD8B00217EE8 /* FLOrderCell.xib in Resources */,
 				92D6EF7719FBC2970082EEE2 /* FLRestaurantViewController.xib in Resources */,
 				92D6EF8919FBD1280082EEE2 /* FLButtonCell.xib in Resources */,
+				92168A9B19FCC31400EA9BF0 /* PiggyPoint.jpg in Resources */,
 				92B9912D19FC1A8200E43E08 /* FLGuestCell.xib in Resources */,
 				92B9918E19FC893B00E43E08 /* FLBillCell.xib in Resources */,
 				92138C4119FBB07E001F041B /* test.png in Resources */,
@@ -770,16 +762,6 @@
 				92CBB3E419FBA574000E5732 /* Images.xcassets in Resources */,
 				92D6EF8D19FBD7100082EEE2 /* FLRestaurantPayCell.xib in Resources */,
 				92B9917219FC542300E43E08 /* FLUserInfoViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92CBB3FF19FBA657000E5732 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				92CBB40F19FBA657000E5732 /* Main.storyboard in Resources */,
-				92CBB41419FBA657000E5732 /* LaunchScreen.xib in Resources */,
-				92CBB41119FBA657000E5732 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,16 +844,6 @@
 				92D6EF9E19FBE6F60082EEE2 /* FLDishEntity.swift in Sources */,
 				92B9912719FC198200E43E08 /* FLGuestViewController.swift in Sources */,
 				92B9912C19FC1A8200E43E08 /* FLGuestCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92CBB3FD19FBA657000E5732 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				92CBB40C19FBA657000E5732 /* ViewController.m in Sources */,
-				92CBB40919FBA657000E5732 /* AppDelegate.m in Sources */,
-				92CBB40619FBA657000E5732 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1071,32 +1043,6 @@
 			};
 			name = Release;
 		};
-		92CBB42219FBA657000E5732 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B9F58D8B17A7DA5120BB25A /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FoodModels/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		92CBB42319FBA657000E5732 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B9F58D8B17A7DA5120BB25A /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = FoodModels/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1114,15 +1060,6 @@
 			buildConfigurations = (
 				92CBB3F719FBA574000E5732 /* Debug */,
 				92CBB3F819FBA574000E5732 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		92CBB42119FBA657000E5732 /* Build configuration list for PBXNativeTarget "FoodModels" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				92CBB42219FBA657000E5732 /* Debug */,
-				92CBB42319FBA657000E5732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
