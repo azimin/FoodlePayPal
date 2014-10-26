@@ -72,6 +72,7 @@
 	NSLog(@"UUIDString %@ MAJOR %@ MINOR %@", beacon.proximityUUID.UUIDString, beacon.major, beacon.minor);
 	if (beacon.proximity == CLProximityUnknown) {
 		NSLog(@"Unknown Proximity");
+		[[FLRestaurantsRequestManager sharedInstance] getRestaurantsCompletion:nil];
 	} else if (beacon.proximity == CLProximityImmediate) {
 		[[FLRestaurantsRequestManager sharedInstance] getRestaurantsWithBeaconId:beacon.major completion:nil];
 		NSLog(@"Immediate");
@@ -82,6 +83,7 @@
 		[[FLRestaurantsRequestManager sharedInstance] getRestaurantsWithBeaconId:beacon.major completion:nil];
 		NSLog(@"FAR");
 	}
+	
 }
 - (BOOL)isARestaurantRegion:(CLBeaconRegion *)region {
 	if ([region.proximityUUID.UUIDString isEqualToString:beaconUUID]) {
