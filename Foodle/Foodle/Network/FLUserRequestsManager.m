@@ -61,7 +61,7 @@
 }
 
 - (void)getUserPreferences:(void (^)(NSArray *preferences))completionHandler {
-	[[FLHTTPRequestOperationManager getBasicManager] GET:@"/order/start/" parameters:@{@"userId":@100} success:^(AFHTTPRequestOperation *operation, id response) {
+	[[FLHTTPRequestOperationManager getBasicManager] GET:@"/order/start/" parameters:@{@"customerId":@100} success:^(AFHTTPRequestOperation *operation, id response) {
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
 			if (completionHandler)
 				completionHandler(responseData);
@@ -73,5 +73,20 @@
 		if (completionHandler)
 			completionHandler(nil);
 	}];
+}
+
+- (void)getUserMenuForRestaurant:(NSNumber *)restaurantId completion:(void (^)(NSArray *preferences))completionHandler {
+	[[FLHTTPRequestOperationManager getBasicManager] GET:@"/app_dev.php/customer/getPersonalizedMenu/" parameters:@{@"customerId":@100,
+																																																			@"restaurantId":restaurantId} success:^(AFHTTPRequestOperation *operation, id response) {
+		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
+			if (completionHandler)
+				completionHandler(responseData);
+		} failure:^(id responseData) {
+
+		}];
+	} failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+
+	}];
+
 }
 @end

@@ -15,4 +15,6 @@
 - (void)getUserOrdersHistory:(void (^)(NSArray *history))completionHandler;
 - (void)getUserPreferences:(void (^)(NSArray *preferences))completionHandler;
 
+- (void)getUserMenuForRestaurant:(NSNumber *)restaurantId completion:(void (^)(NSArray *preferences))completionHandler;
+
 @end

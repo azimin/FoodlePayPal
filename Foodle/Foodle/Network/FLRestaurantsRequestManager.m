@@ -80,7 +80,7 @@
 		
 		FLRestaurantEntity *entity = [[FLRestaurantEntity alloc] init];
 		entity.restaurantName = restData[@"name"];
-		entity.restaurantId = [restData[@"restaurantId"] integerValue];
+		entity.restaurantId = [restData[@"id"] integerValue];
 		entity.restaurantDescription = restData[@"description"];
 		entity.restaurantInfo = restData[@"info"];
 		entity.restaurantImageURL = restData[@"photo"];
