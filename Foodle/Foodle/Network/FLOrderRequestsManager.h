@@ -10,7 +10,7 @@
 
 @interface FLOrderRequestsManager : NSObject
 
-- (void)startOrder;
+- (void)startOrderAtTable:(NSNumber *)tableNumber;
 - (void)addDish:(id)dish;
 - (void)updateDish:(id)dish toAmount:(NSUInteger)newAmount;
 - (void)payForOrderWithInfo:(NSData *)confirmation;

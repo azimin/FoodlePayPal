@@ -157,6 +157,7 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
         if buttonIndex != 0 {
             if let tableNum = textField?.text.toInt() {
                 tableNumber = tableNum
+								FLOrderRequestsManager().startOrderAtTable(tableNumber)
                 updateData()
             }
         }

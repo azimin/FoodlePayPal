@@ -12,10 +12,13 @@
 
 @implementation FLOrderRequestsManager
 
-- (void)startOrder {
-	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/order/initialize/" parameters:nil success:^(AFHTTPRequestOperation *operation, id response) {
+- (void)startOrderAtTable:(NSNumber *)tableNumber {
+	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/order/initialize/" parameters:@{@"customerId":@(kCustomerID),
+																																													 @"restaurantId":@(kReataurantId),
+																																													 @"restaurantManagerId":@(restaurantManagerId),
+																																													 @"tableNumber":tableNumber} success:^(AFHTTPRequestOperation *operation, id response) {
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
-			
+			[[FLModelHolder sharedInstance] setOrderId:[responseData[@"orderId"] unsignedIntegerValue]];
 		} failure:^(id responseData) {
 			
 		}];

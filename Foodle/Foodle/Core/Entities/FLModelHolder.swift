@@ -15,6 +15,7 @@ class FLModelHolder: NSObject {
 	var activeUsers : [FLUserEntity] = []
 	var currentUser : FLUserEntity?
 	var orderedDishes: [FLDishEntity] = []
+	var orderId  = 1
 	class var sharedInstance :FLModelHolder {
 		struct Singleton {
 			static let instance = FLModelHolder()

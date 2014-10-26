@@ -8,6 +8,9 @@
 
 #import "AFNetworking.h"
 #import "AFHTTPRequestOperationManager.h"
+#define kCustomerID 7
+#define restaurantManagerId 1
+#define kReataurantId 18
 
 @interface FLHTTPRequestOperationManager : AFHTTPRequestOperationManager
 
