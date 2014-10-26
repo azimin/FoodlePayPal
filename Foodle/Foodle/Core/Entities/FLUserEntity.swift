@@ -13,7 +13,7 @@ class FLUserEntity: NSObject {
     var userBill: CGFloat = 0.0
     var userNewDishes = 0
     var userTable = 0
-    
+		var userId:NSNumber?
     override init() {
         
     }

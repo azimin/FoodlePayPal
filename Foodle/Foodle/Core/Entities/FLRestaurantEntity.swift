@@ -12,7 +12,7 @@ class FLRestaurantEntity: NSObject {
     var restaurantName = ""
     var restaurantDescription = ""
     var restaurantInfo = ""
-    
+    var restaurantId = 1
     var restaurantImageURL = ""
     
     var restaurantRange = 0.0

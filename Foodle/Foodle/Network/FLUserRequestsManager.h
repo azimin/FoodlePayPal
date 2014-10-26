@@ -10,8 +10,8 @@
 
 @interface FLUserRequestsManager : NSObject
 
-- (void)registerCustomer:(NSString *)installationId;
-- (void)registerManager:(NSString *)installationId;
+- (void)registerCustomer:(NSString *)installationId name:(NSString *)username;
+- (void)registerManager:(NSString *)installationId name:(NSString *)username;
 - (void)getUserOrdersHistory:(void (^)(NSArray *history))completionHandler;
 - (void)getUserPreferences:(void (^)(NSArray *preferences))completionHandler;
 
