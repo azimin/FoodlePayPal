@@ -26,7 +26,9 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
     }
     
     func openSettings() {
-        
+        let restauerantsVC = FLStartViewController(nibName: "FLStartViewController", bundle: nil)
+        let navigationVC = FLBaseNavigationController(rootViewController: restauerantsVC)
+        self.presentViewController(navigationVC, animated: true, completion: nil)
     }
     
     // MARK: - TableView Data Source
@@ -76,6 +78,7 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
     }
 	
 	func updateRestaurantsList(notification: NSNotification) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
 		restaurants = FLModelHolder.sharedInstance.restaurants
 		self.tableView.reloadData()
 	}

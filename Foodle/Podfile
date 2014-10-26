@@ -5,3 +5,5 @@ pod 'Colours'
 pod 'FrameAccessor'
 pod 'AFNetworking',  :inhibit_warnings => true
 pod 'SDWebImage'
+pod 'MBProgressHUD'
+pod 'MagicalRecord',  :inhibit_warnings => true

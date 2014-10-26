@@ -39,7 +39,6 @@ class FLRestaurantCell: UITableViewCell {
         nameLabel.text = restaurant.restaurantName
         descriptionLabel.text = restaurant.restaurantDescription
         //recomendationsLabel.text = "sadjsajk jksad jksaj djas jkdjkas jdksa jkdjkajks djsa djkasjkd"
-        descriptionLabel.text? += "\nsadjsajk jksad jksaj djas jkdjkas jdksa jkdjkajks djsa djkasjkd"
         
         if restaurant.isIBecacon {
             stateIconImage.image = UIImage(named: "bluetoothIcon")
@@ -48,17 +47,22 @@ class FLRestaurantCell: UITableViewCell {
         }
         
         self.restaurant = restaurant
+        
+        restaurantImage.image = UIImage(named: restaurant.restaurantImageURL)
+        backgroundImage.backgroundColor = UIColor.blackColor()
+        backgroundImage.alpha = 0.4
     }
     
+    
     func showImage(show: Bool) {
-        if (show && restaurant != nil) {
-            restaurantImage.image = UIImage(named: restaurant!.restaurantImageURL)
-            backgroundImage.backgroundColor = UIColor.blackColor()
-            backgroundImage.alpha = 0.4
-        } else {
-            backgroundImage.backgroundColor = UIColor(fromHexString: "a0b6a7")
-            backgroundImage.alpha = 1.0
-        }
+//        if (show && restaurant != nil) {
+//            restaurantImage.image = UIImage(named: restaurant!.restaurantImageURL)
+//            backgroundImage.backgroundColor = UIColor.blackColor()
+//            backgroundImage.alpha = 0.4
+//        } else {
+//            backgroundImage.backgroundColor = UIColor(fromHexString: "a0b6a7")
+//            backgroundImage.alpha = 1.0
+//        }
     }
     
 }
