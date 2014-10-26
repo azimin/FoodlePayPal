@@ -22,9 +22,14 @@ class FLMenuViewController: FLBaseViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
 
         var dishes: [FLDishEntity] = []
-        dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla", dishImageURL: "coctailImage", dishPrice: 35.5, dishCategory: "Coctails"))
-        dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 25.5, dishCategory: "Coctails"))
-        dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat"))
+        dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "Nice Cocatail", dishImageURL: "coctailImage", dishPrice: 35.5, dishCategory: "Coctails"))
+        dishes.append(FLDishEntity(dishName: "Steak", dishDescription: "Great steak for you ", dishImageURL: "HOT_steak", dishPrice: 25.5, dishCategory: "Steak"))
+        dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat"))
+			 dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat"))
+			 dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat"))
+			 dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat"))
+			 dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat"))
+			 dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat"))
         
         dishesCategories = FLDishEntity.filterDishes(dishes)
         keys = dishesCategories.keys.array
