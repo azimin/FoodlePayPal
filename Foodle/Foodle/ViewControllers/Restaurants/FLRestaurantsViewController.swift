@@ -69,9 +69,10 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let restauerantsVC = FLRestaurantViewController(nibName: "FLRestaurantViewController", bundle: nil)
+				restauerantsVC.restaurant = self.restaurants[indexPath.row]
         self.navigationController?.pushViewController(restauerantsVC, animated: true)
         
-        AppDelegate.sharedAppDelegate().emitateBillWindow()
+       // AppDelegate.sharedAppDelegate().emitateBillWindow()
     }
 	
 	func updateRestaurantsList(notification: NSNotification) {
