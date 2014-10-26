@@ -27,7 +27,9 @@
 }
 
 - (void)addDish:(id)dish {
-	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/order/addDish/" parameters:nil success:^(AFHTTPRequestOperation *operation, id response) {
+	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/order/addItem/" parameters:@{@"orderId":@([[FLModelHolder sharedInstance] orderId]),
+																																												@"menuItemId":@(8),
+																																												@"quantity":@(1)} success:^(AFHTTPRequestOperation *operation, id response) {
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
 			
 		} failure:^(id responseData) {
