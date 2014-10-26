@@ -8,6 +8,8 @@
 
 #import "FLOrderRequestsManager.h"
 #import "FLHTTPRequestOperationManager.h"
+#import "Foodle-Swift.h"
+
 @implementation FLOrderRequestsManager
 
 - (void)startOrder {
@@ -56,5 +58,57 @@
 	} failure:^(AFHTTPRequestOperation *operation, NSError *err) {
 	}];
 
+}
+
+- (void)getOrder:(NSNumber *)orderId completion:(void (^)(NSArray *))completionHandler {
+	NSArray *dishes = [self getSomeOrderData];
+	[FLModelHolder sharedInstance].orderedDishes = dishes;
+	if (completionHandler)
+		completionHandler(dishes);
+	return;
+	
+	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/order/get/" parameters:@{@"orderId":orderId,
+																																										@"customerId":[[[FLModelHolder sharedInstance] currentUser] userId]} success:^(AFHTTPRequestOperation *operation, id response) {
+		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
+			NSArray *dishes = [self parseOrderWithData:responseData[@"dishes"]];
+			[FLModelHolder sharedInstance].orderedDishes = dishes;
+			if (completionHandler)
+				completionHandler(dishes);
+		} failure:^(id responseData) {
+			if (completionHandler)
+				completionHandler(nil);
+		}];
+	} failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+		if (completionHandler)
+			completionHandler(nil);
+	}];
+
+}
+
+- (NSArray *)parseOrderWithData:(NSArray *)responseData {
+	
+	NSMutableArray *dishes = [NSMutableArray new];
+	for (NSDictionary *restData in responseData) {
+		
+		FLDishEntity *entity = [[FLDishEntity alloc] init];
+		entity.dishCategory = restData[@"category"];
+		entity.dishPrice = [restData[@"price"] doubleValue];
+		entity.dishDescription = restData[@"description"];
+		entity.dishPriority = [restData[@"rating"] integerValue];
+		entity.dishImageURL = restData[@"photo"];
+		entity.count = [restData[@"amount"] integerValue];
+		
+	[dishes addObject:entity];
+	}
+	return dishes;
+}
+
+- (NSArray *)getSomeOrderData {
+	NSMutableArray *dishes = [NSMutableArray new];
+	[dishes addObject:[[FLDishEntity alloc] initWithDishName:@"Coctail" dishDescription:@"So great!" dishImageURL:@"coctailImage" dishPrice:35.5 dishCategory:@"Coctails"]];
+	[dishes addObject:[[FLDishEntity alloc] initWithDishName:@"Coctail me" dishDescription:@"So great too!" dishImageURL:@"coctailImage" dishPrice:55.5 dishCategory:@"Coctails"]];
+	[dishes addObject:[[FLDishEntity alloc] initWithDishName:@"Coctail" dishDescription:@"So great!" dishImageURL:@"coctailImage" dishPrice:35.5 dishCategory:@"Meat"]];
+	[dishes addObject:[[FLDishEntity alloc] initWithDishName:@"Coctail" dishDescription:@"So great!" dishImageURL:@"coctailImage" dishPrice:35.5 dishCategory:@"Coctails"]];
+	return dishes;
 }
 @end

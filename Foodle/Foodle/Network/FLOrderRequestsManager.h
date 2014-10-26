@@ -14,5 +14,5 @@
 - (void)addDish:(id)dish;
 - (void)updateDish:(id)dish toAmount:(NSUInteger)newAmount;
 - (void)payForOrderWithInfo:(NSData *)confirmation;
-
+- (void)getOrder:(NSNumber *)orderId completion:(void (^)(NSArray *dishes))completionHandler;
 @end
