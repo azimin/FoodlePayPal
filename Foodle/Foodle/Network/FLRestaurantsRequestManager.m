@@ -31,7 +31,7 @@
 	self.isFetching = YES;
 	NSMutableDictionary *params = [NSMutableDictionary new];
 	if (beaconId) params[@"beaconId"] = beaconId;
-	[[FLHTTPRequestOperationManager getBasicManager] GET:@"/app_dev.php/restaurant/listByiBeacon/" parameters:params success:^(AFHTTPRequestOperation *operation, id response) {
+	[[FLHTTPRequestOperationManager getBasicManager] GET:@"/restaurant/listByiBeacon/" parameters:params success:^(AFHTTPRequestOperation *operation, id response) {
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
 			//Parse
 			NSArray *restaurants = [self parseRestaurantsWithData:responseData[@"restaurants"]];
@@ -40,7 +40,7 @@
 			self.isFetching = NO;
 			if (completionHandler)
 				completionHandler(responseData);
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"restsurantsListUpdated" object:nil];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"restsurantsListUpdatedWithBeacon" object:nil];
 		} failure:^(id responseData) {
 			self.isFetching = NO;
 			if (completionHandler)
@@ -62,7 +62,7 @@
 			
 			if (completionHandler)
 				completionHandler(responseData);
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"restsurantsListUpdatedWithBeacon" object:nil];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"restsurantsListUpdated" object:nil];
 			
 		} failure:^(id responseData) {
 			if (completionHandler)
