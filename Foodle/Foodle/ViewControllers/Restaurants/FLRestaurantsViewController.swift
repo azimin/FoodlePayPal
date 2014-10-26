@@ -78,12 +78,12 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
     }
 	
 	func updateRestaurantsList(notification: NSNotification) {
-		NSNotificationCenter.defaultCenter().removeObserver(self, name: "updateRestaurantsList", object: nil)
+		NSNotificationCenter.defaultCenter().removeObserver(self, name: "restsurantsListUpdated", object: nil)
 		restaurants = FLModelHolder.sharedInstance.restaurants
 		self.tableView.reloadData()
 	}
 	func updateRestaurantsListBeacon(notification: NSNotification) {
-		NSNotificationCenter.defaultCenter().removeObserver(self, name: "updateRestaurantsListBeacon", object: nil)
+		NSNotificationCenter.defaultCenter().removeObserver(self, name: "restsurantsListUpdatedWithBeacon", object: nil)
 		restaurants = FLModelHolder.sharedInstance.restaurants
 		self.tableView.reloadData()
 	}
