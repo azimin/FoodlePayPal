@@ -9,25 +9,33 @@
 #import "FLRestaurantsRequestManager.h"
 #import "FLHTTPRequestOperationManager.h"
 #import "Foodle-Swift.h"
+@interface FLRestaurantsRequestManager ()
+@property BOOL isFetching;
+@end
 
 @implementation FLRestaurantsRequestManager
 
 - (void)getRestaurantsWithBeaconId:(NSNumber *)beaconId completion:(void (^)(NSArray *))completionHandler {
+	if (self.isFetching)
+		return;
+	self.isFetching = YES;
 	NSMutableDictionary *params = [NSMutableDictionary new];
 	if (beaconId) params[@"beaconId"] = beaconId;
-	[[FLHTTPRequestOperationManager getBasicManager] GET:@"/restaurant/listByiBeacon/" parameters:params success:^(AFHTTPRequestOperation *operation, id response) {
+	[[FLHTTPRequestOperationManager getBasicManager] GET:@"/app_dev.php/restaurant/listByiBeacon/" parameters:params success:^(AFHTTPRequestOperation *operation, id response) {
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
 			//Parse
-			NSArray *restaurants = [self parseRestaurantsWithData:responseData];
+			NSArray *restaurants = [self parseRestaurantsWithData:responseData[@"restaurants"]];
 			[FLModelHolder sharedInstance].restaurants = restaurants;
-			
+			self.isFetching = NO;
 			if (completionHandler)
 				completionHandler(responseData);
 		} failure:^(id responseData) {
+			self.isFetching = NO;
 			if (completionHandler)
 				completionHandler(nil);
 		}];
 	} failure:^(AFHTTPRequestOperation *operation, NSError *err) {
+		self.isFetching = NO;
 		if (completionHandler)
 			completionHandler(nil);
 	}];
@@ -37,7 +45,7 @@
 	[[FLHTTPRequestOperationManager getBasicManager] GET:@"/restaurant/list/" parameters:nil success:^(AFHTTPRequestOperation *operation, id response) {
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
 			//Parse
-			NSArray *restaurants = [self parseRestaurantsWithData:responseData];
+			NSArray *restaurants = [self parseRestaurantsWithData:responseData[@"restaurants"]];
 			[FLModelHolder sharedInstance].restaurants = restaurants;
 			
 			if (completionHandler)
@@ -68,7 +76,7 @@
 			entity.isIBecacon = YES;
 		else
 			entity.isIBecacon = NO;
-
+		[restaurants addObject:entity];
 	}
 	return restaurants;
 }

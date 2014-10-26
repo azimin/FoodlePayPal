@@ -11,7 +11,7 @@
 @implementation FLHTTPRequestOperationManager
 
 + (AFHTTPRequestOperationManager *)getBasicManager {
-  AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://192.168.32.226/app_dev.php/"]];
+  AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://192.168.32.226/"]];
   manager.securityPolicy.allowInvalidCertificates = YES;
   return manager;
 }

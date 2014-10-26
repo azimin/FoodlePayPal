@@ -12,7 +12,7 @@
 
 @implementation FLUserRequestsManager
 - (void)registerCustomer:(NSString *)installationId name:(NSString *)username {
-	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/customer/register/" parameters:@{@"parseInstallationId":installationId,
+	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/app_dev.php/customer/register/" parameters:@{@"parseInstallationId":installationId,
 																																														@"name":username} success:^(AFHTTPRequestOperation *operation, id response) {
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
 			FLUserEntity *user = [[FLUserEntity alloc] init];
@@ -27,7 +27,7 @@
 }
 
 - (void)registerManager:(NSString *)installationId name:(NSString *)username {
-	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/restaurantManager/register/" parameters:@{@"parseInstallationId":installationId,
+	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/app_dev.php/restaurantManager/register/" parameters:@{@"parseInstallationId":installationId,
 																																												@"name": username,
 																																												@"restaurantId":@100} success:^(AFHTTPRequestOperation *operation, id response) {
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
