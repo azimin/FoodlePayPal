@@ -14,18 +14,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmx-hY-HPD">
-                        <rect key="frame" x="101" y="28" width="147" height="57.5"/>
-                        <constraints>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="Rxp-iR-dAR"/>
-                        </constraints>
-                        <string key="text">Rum, orange liqueur,
-almond syrup,
-</string>
-                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                        <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vb3-8r-YUO">
                         <rect key="frame" x="14" y="12" width="79" height="79"/>
                         <constraints>
@@ -34,8 +22,11 @@ almond syrup,
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Mai Tai" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSN-uG-4YH">
-                        <rect key="frame" x="101" y="8" width="134" height="18.5"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                        <rect key="frame" x="101" y="8" width="134" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Wow-de-a1x"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -45,7 +36,7 @@ almond syrup,
                             <constraint firstAttribute="height" constant="21" id="1Rh-aZ-LJ2"/>
                             <constraint firstAttribute="width" constant="62" id="Yeu-Qo-dnO"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -76,17 +67,30 @@ almond syrup,
                             <constraint firstAttribute="width" constant="21" id="rzu-o0-pWN"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmx-hY-HPD">
+                        <rect key="frame" x="101" y="37" width="147" height="54"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="Rxp-iR-dAR"/>
+                        </constraints>
+                        <string key="text">Rum, orange liqueur,
+almond syrup,
+</string>
+                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                        <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="F0N-Pb-0PJ" firstAttribute="top" secondItem="nmx-hY-HPD" secondAttribute="bottom" constant="17" id="2T7-7A-uSK"/>
+                    <constraint firstItem="F0N-Pb-0PJ" firstAttribute="top" secondItem="nmx-hY-HPD" secondAttribute="bottom" constant="11" id="2T7-7A-uSK"/>
                     <constraint firstItem="nmx-hY-HPD" firstAttribute="leading" secondItem="vb3-8r-YUO" secondAttribute="trailing" constant="8" id="3iE-5m-CoA"/>
                     <constraint firstItem="1tZ-ne-ghy" firstAttribute="leading" secondItem="nmx-hY-HPD" secondAttribute="trailing" constant="8" id="4jy-1i-EVa"/>
                     <constraint firstAttribute="centerY" secondItem="vb3-8r-YUO" secondAttribute="centerY" id="63b-LC-Oki"/>
-                    <constraint firstItem="nmx-hY-HPD" firstAttribute="top" secondItem="JSN-uG-4YH" secondAttribute="bottom" constant="1" id="90D-Fj-pPW"/>
+                    <constraint firstItem="nmx-hY-HPD" firstAttribute="top" secondItem="JSN-uG-4YH" secondAttribute="bottom" constant="4" id="90D-Fj-pPW"/>
                     <constraint firstItem="vb3-8r-YUO" firstAttribute="top" secondItem="Zo3-VK-aV9" secondAttribute="bottom" constant="-21" id="DNC-sH-tI1"/>
                     <constraint firstItem="vb3-8r-YUO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="HWV-wP-DJ9"/>
                     <constraint firstItem="JSN-uG-4YH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="Hlc-3G-74T"/>
                     <constraint firstItem="JSN-uG-4YH" firstAttribute="leading" secondItem="vb3-8r-YUO" secondAttribute="trailing" constant="8" id="Jrz-7r-ugC"/>
+                    <constraint firstItem="nmx-hY-HPD" firstAttribute="top" secondItem="JSN-uG-4YH" secondAttribute="bottom" constant="4" id="PHy-I1-XAv"/>
                     <constraint firstAttribute="trailingMargin" secondItem="1tZ-ne-ghy" secondAttribute="trailing" constant="6" id="QNB-Z3-kJR"/>
                     <constraint firstItem="qiV-8M-bmj" firstAttribute="leading" secondItem="JSN-uG-4YH" secondAttribute="trailing" constant="15" id="R79-qB-HUy"/>
                     <constraint firstAttribute="bottomMargin" secondItem="F0N-Pb-0PJ" secondAttribute="bottom" constant="-8.5" id="RtO-Ew-Qui"/>
@@ -101,6 +105,7 @@ almond syrup,
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
+                        <exclude reference="90D-Fj-pPW"/>
                         <exclude reference="VtR-74-tqD"/>
                         <exclude reference="4jy-1i-EVa"/>
                     </mask>
