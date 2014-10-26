@@ -7,50 +7,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FLButtonCell" customModule="Foodle" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="FLButtonCell" customModule="Foodle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hd9-eu-KN7">
-                        <rect key="frame" x="46" y="11" width="266" height="21"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                        <rect key="frame" x="73" y="11" width="239" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="PJ7-mB-HGd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxo-QA-ycv">
-                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <rect key="frame" x="0.0" y="59" width="320" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="PFg-6b-G1w"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellAccesory" translatesAutoresizingMaskIntoConstraints="NO" id="6V4-IR-PSp">
-                        <rect key="frame" x="290" y="14" width="10" height="16"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coctailImage" translatesAutoresizingMaskIntoConstraints="NO" id="Bju-ZX-UBa">
+                        <rect key="frame" x="8" y="7" width="45" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="10" id="1e3-SW-cBk"/>
-                            <constraint firstAttribute="height" constant="16" id="EA0-cn-ImO"/>
+                            <constraint firstAttribute="height" constant="45" id="6MX-7e-ol8"/>
+                            <constraint firstAttribute="width" constant="45" id="eS6-eq-7Qj"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coctailImage" translatesAutoresizingMaskIntoConstraints="NO" id="Bju-ZX-UBa">
-                        <rect key="frame" x="8" y="7" width="30" height="30"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellAccesory" translatesAutoresizingMaskIntoConstraints="NO" id="6V4-IR-PSp">
+                        <rect key="frame" x="292" y="18" width="15" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="6MX-7e-ol8"/>
-                            <constraint firstAttribute="width" constant="30" id="eS6-eq-7Qj"/>
+                            <constraint firstAttribute="width" constant="15" id="1e3-SW-cBk"/>
+                            <constraint firstAttribute="height" constant="24" id="EA0-cn-ImO"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Bju-ZX-UBa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="6AW-wV-NiX"/>
                     <constraint firstItem="hd9-eu-KN7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="PoO-j4-U7X"/>
-                    <constraint firstItem="hd9-eu-KN7" firstAttribute="leading" secondItem="Bju-ZX-UBa" secondAttribute="trailing" constant="8" id="SLA-9p-mDP"/>
+                    <constraint firstItem="hd9-eu-KN7" firstAttribute="leading" secondItem="Bju-ZX-UBa" secondAttribute="trailing" constant="20" id="SLA-9p-mDP"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Jxo-QA-ycv" secondAttribute="bottom" constant="-8" id="V74-jl-CNa"/>
                     <constraint firstItem="Jxo-QA-ycv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="VFV-le-7g9"/>
-                    <constraint firstItem="6V4-IR-PSp" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-12" id="Xc0-R6-Gq2"/>
+                    <constraint firstItem="6V4-IR-PSp" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-5" id="Xc0-R6-Gq2"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Jxo-QA-ycv" secondAttribute="trailing" constant="-8" id="fZY-88-P1u"/>
-                    <constraint firstItem="Jxo-QA-ycv" firstAttribute="top" secondItem="hd9-eu-KN7" secondAttribute="bottom" constant="11" id="mkN-eW-7cO"/>
+                    <constraint firstItem="Jxo-QA-ycv" firstAttribute="top" secondItem="hd9-eu-KN7" secondAttribute="bottom" constant="8" id="mkN-eW-7cO"/>
                     <constraint firstItem="hd9-eu-KN7" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="pJL-25-x5I"/>
                     <constraint firstAttribute="centerY" secondItem="6V4-IR-PSp" secondAttribute="centerY" id="r9w-Qb-Ltl"/>
                     <constraint firstItem="Bju-ZX-UBa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="xTd-6Q-Jam"/>
@@ -62,6 +65,7 @@
                 <outlet property="buttonTextLabel" destination="hd9-eu-KN7" id="qMP-w4-GQT"/>
                 <outlet property="seperatorView" destination="Jxo-QA-ycv" id="i2B-lL-9bY"/>
             </connections>
+            <point key="canvasLocation" x="249" y="314"/>
         </tableViewCell>
     </objects>
     <resources>
