@@ -14,6 +14,8 @@ class FLButtonCell: UITableViewCell {
     @IBOutlet weak var buttonTextLabel: UILabel!
     @IBOutlet weak var accesoryGreenView: UIImageView!
     
+    @IBOutlet weak var buttonImageP: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.buttonTextLabel.textColor = UIColor.appColor()

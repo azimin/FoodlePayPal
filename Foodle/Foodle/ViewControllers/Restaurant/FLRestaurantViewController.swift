@@ -21,6 +21,7 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
     var restaurant: FLRestaurantEntity = FLRestaurantEntity(restaurantName: "Swag", restaurantDescription: "bla bla bla blabla blabla bla bla bla bla bla bla bla bla blabla blabla bla bla blabla blabla bla bla bla bla blabla blabla blabla bla bla bla bla blabla bla", isIBecacon: true, restaurantImageURL: "test")
     var cells: [CellsType] = []
     var buttons: [String] = ["Menu", "Order", "Call the waiter"]
+    var buttonsName: [String] = ["menuI", "OrderI", "waiterI"]
     var tableNumber: Int?
     
     override func viewDidLoad() {
@@ -96,6 +97,7 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
         } else if (type == .ButtonsCells) {
             let cell = tableView.dequeueReusableCellWithIdentifier("FLButtonCell", forIndexPath: indexPath) as FLButtonCell
             cell.buttonTextLabel.text = buttons[indexPath.row]
+            cell.buttonImageP.image = UIImage(named: buttonsName[indexPath.row])
             cell.showAccesorise(!(indexPath.row < 2))
             
             return cell

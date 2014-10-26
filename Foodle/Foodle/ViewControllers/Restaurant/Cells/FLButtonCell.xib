@@ -58,6 +58,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="accesoryGreenView" destination="6V4-IR-PSp" id="KPd-HS-bMO"/>
+                <outlet property="buttonImageP" destination="Bju-ZX-UBa" id="8qv-aw-i5c"/>
                 <outlet property="buttonTextLabel" destination="hd9-eu-KN7" id="qMP-w4-GQT"/>
                 <outlet property="seperatorView" destination="Jxo-QA-ycv" id="i2B-lL-9bY"/>
             </connections>
