@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var controller: UIViewController?
         
         if isGuest {
-            controller = FLRestaurantsViewController(nibName: "FLRestaurantsViewController", bundle: nil)
+            controller = FLStartViewController(nibName: "FLStartViewController", bundle: nil)
         } else {
             controller = FLUserInfoViewController(nibName: "FLUserInfoViewController", bundle: nil)
         }

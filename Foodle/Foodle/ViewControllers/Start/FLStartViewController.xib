@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLStartViewController" customModule="Foodle" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonHeight" destination="Rqg-cb-HvR" id="rh7-er-YWO"/>
+                <outlet property="contentView" destination="5nc-CH-U9c" id="Nes-DZ-6hr"/>
+                <outlet property="goButton" destination="rTZ-KG-78O" id="rtp-Nf-0wq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="instruction" translatesAutoresizingMaskIntoConstraints="NO" id="Guj-Xs-EUf">
+                    <rect key="frame" x="47" y="68" width="226" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="IIa-n7-dvx"/>
+                        <constraint firstAttribute="width" constant="226" id="sFg-T9-oK8"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Rej-Mr-Xcv">
+                    <rect key="frame" x="0.0" y="5" width="320" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="CNn-S8-t0T"/>
+                        <constraint firstAttribute="width" constant="320" id="qvD-Kb-vxZ"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nc-CH-U9c">
+                    <rect key="frame" x="0.0" y="121" width="320" height="401"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTZ-KG-78O">
+                    <rect key="frame" x="0.0" y="522" width="320" height="46"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="Rqg-cb-HvR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                    <state key="normal" title="Let's go!">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="goButtonAction:" destination="-1" eventType="touchUpInside" id="dQo-qo-hPA"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5nc-CH-U9c" firstAttribute="top" secondItem="Guj-Xs-EUf" secondAttribute="bottom" constant="8" id="4nf-D0-cha"/>
+                <constraint firstItem="5nc-CH-U9c" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9RC-Jy-oQQ"/>
+                <constraint firstAttribute="centerX" secondItem="Guj-Xs-EUf" secondAttribute="centerX" id="BCy-Ic-t14"/>
+                <constraint firstItem="rTZ-KG-78O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JO2-aD-Skf"/>
+                <constraint firstItem="rTZ-KG-78O" firstAttribute="top" secondItem="5nc-CH-U9c" secondAttribute="bottom" id="LpC-3C-Qwn"/>
+                <constraint firstItem="Rej-Mr-Xcv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="5" id="NJf-ks-uOV"/>
+                <constraint firstItem="Guj-Xs-EUf" firstAttribute="top" secondItem="Rej-Mr-Xcv" secondAttribute="bottom" constant="13" id="QaN-NG-hV8"/>
+                <constraint firstAttribute="trailing" secondItem="rTZ-KG-78O" secondAttribute="trailing" id="Wj7-jN-I3A"/>
+                <constraint firstAttribute="centerX" secondItem="Rej-Mr-Xcv" secondAttribute="centerX" id="juz-dX-E8G"/>
+                <constraint firstAttribute="bottom" secondItem="rTZ-KG-78O" secondAttribute="bottom" id="uUy-Bo-8ue"/>
+                <constraint firstAttribute="trailing" secondItem="5nc-CH-U9c" secondAttribute="trailing" id="xQ3-9Z-0Bp"/>
+            </constraints>
+            <point key="canvasLocation" x="249" y="164"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="instruction" width="226" height="44"/>
+        <image name="logo" width="375" height="57"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

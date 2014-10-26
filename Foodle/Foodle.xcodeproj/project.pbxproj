@@ -55,6 +55,9 @@
 		92B9918A19FC892D00E43E08 /* FLHeaderBillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92B9918819FC892D00E43E08 /* FLHeaderBillCell.xib */; };
 		92B9918D19FC893B00E43E08 /* FLBillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9918B19FC893B00E43E08 /* FLBillCell.swift */; };
 		92B9918E19FC893B00E43E08 /* FLBillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92B9918C19FC893B00E43E08 /* FLBillCell.xib */; };
+		92B9919219FC98BD00E43E08 /* FLStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9919019FC98BD00E43E08 /* FLStartViewController.swift */; };
+		92B9919319FC98BD00E43E08 /* FLStartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92B9919119FC98BD00E43E08 /* FLStartViewController.xib */; };
+		92B9919B19FCA31100E43E08 /* FLTutorialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9919A19FCA31100E43E08 /* FLTutorialButton.swift */; };
 		92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBB3DC19FBA574000E5732 /* AppDelegate.swift */; };
 		92CBB3E419FBA574000E5732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB3E319FBA574000E5732 /* Images.xcassets */; };
 		92CBB3E719FBA574000E5732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92CBB3E519FBA574000E5732 /* LaunchScreen.xib */; };
@@ -151,6 +154,9 @@
 		92B9918819FC892D00E43E08 /* FLHeaderBillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLHeaderBillCell.xib; path = ViewControllers/Bill/FLHeaderBillCell.xib; sourceTree = "<group>"; };
 		92B9918B19FC893B00E43E08 /* FLBillCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLBillCell.swift; path = ViewControllers/Bill/FLBillCell.swift; sourceTree = "<group>"; };
 		92B9918C19FC893B00E43E08 /* FLBillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLBillCell.xib; path = ViewControllers/Bill/FLBillCell.xib; sourceTree = "<group>"; };
+		92B9919019FC98BD00E43E08 /* FLStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLStartViewController.swift; path = ViewControllers/Start/FLStartViewController.swift; sourceTree = "<group>"; };
+		92B9919119FC98BD00E43E08 /* FLStartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FLStartViewController.xib; path = ViewControllers/Start/FLStartViewController.xib; sourceTree = "<group>"; };
+		92B9919A19FCA31100E43E08 /* FLTutorialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLTutorialButton.swift; path = ViewControllers/Start/FLTutorialButton.swift; sourceTree = "<group>"; };
 		92CBB3D719FBA574000E5732 /* Foodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CBB3DB19FBA574000E5732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92CBB3DC19FBA574000E5732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -406,6 +412,24 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		92B9918F19FC975300E43E08 /* StartScreen */ = {
+			isa = PBXGroup;
+			children = (
+				92B9919919FCA2EC00E43E08 /* Button */,
+				92B9919019FC98BD00E43E08 /* FLStartViewController.swift */,
+				92B9919119FC98BD00E43E08 /* FLStartViewController.xib */,
+			);
+			name = StartScreen;
+			sourceTree = "<group>";
+		};
+		92B9919919FCA2EC00E43E08 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				92B9919A19FCA31100E43E08 /* FLTutorialButton.swift */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
 		92CBB3CE19FBA574000E5732 = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +511,7 @@
 		92CBB42719FBA685000E5732 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				92B9918F19FC975300E43E08 /* StartScreen */,
 				92B9917A19FC6F7E00E43E08 /* Bill */,
 				92B9916E19FC540A00E43E08 /* UserInfo */,
 				929F700619FC18A300A815A4 /* Gusts */,
@@ -728,6 +753,7 @@
 				920DED5119FBFC0800217EE8 /* FLOrderViewController.xib in Resources */,
 				92B9912819FC198200E43E08 /* FLGuestViewController.xib in Resources */,
 				92B9917E19FC6F9300E43E08 /* FLBillViewController.xib in Resources */,
+				92B9919319FC98BD00E43E08 /* FLStartViewController.xib in Resources */,
 				92D6EF9219FBDE300082EEE2 /* FLMenuViewController.xib in Resources */,
 				92D6EF9C19FBE4030082EEE2 /* FLDishTableViewCell.xib in Resources */,
 				92B9918A19FC892D00E43E08 /* FLHeaderBillCell.xib in Resources */,
@@ -812,6 +838,7 @@
 				92B9918D19FC893B00E43E08 /* FLBillCell.swift in Sources */,
 				A538528419FC5E420080F19E /* FLOrderRequestsManager.m in Sources */,
 				A538528A19FC63E60080F19E /* FLUserRequestsManager.m in Sources */,
+				92B9919219FC98BD00E43E08 /* FLStartViewController.swift in Sources */,
 				92D6EF9119FBDE300082EEE2 /* FLMenuViewController.swift in Sources */,
 				92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */,
 				92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */,
@@ -823,6 +850,7 @@
 				92B9918919FC892D00E43E08 /* FLHeaderBillCell.swift in Sources */,
 				920DED5519FBFD8B00217EE8 /* FLOrderCell.swift in Sources */,
 				92D6EF8C19FBD7100082EEE2 /* FLRestaurantPayCell.swift in Sources */,
+				92B9919B19FCA31100E43E08 /* FLTutorialButton.swift in Sources */,
 				92B9916D19FC480F00E43E08 /* FLPayPalController.swift in Sources */,
 				92138C3F19FBABED001F041B /* FrameCalculation.swift in Sources */,
 				92B9917119FC542300E43E08 /* FLUserInfoViewController.swift in Sources */,
