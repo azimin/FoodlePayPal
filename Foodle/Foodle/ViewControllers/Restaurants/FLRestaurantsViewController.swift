@@ -69,9 +69,18 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
+			
+			let resaurant = self.restaurants[indexPath.section];
+			
         let restauerantsVC = FLRestaurantViewController(nibName: "FLRestaurantViewController", bundle: nil)
-				restauerantsVC.restaurant = self.restaurants[indexPath.section]
+				restauerantsVC.restaurant = resaurant
+			
+			if resaurant.isIBecacon {
+				restauerantsVC.tableNumber = Int(rand() % 10)
+
+				FLOrderRequestsManager().startOrderAtTable(restauerantsVC.tableNumber)
+			}
+			
         self.navigationController?.pushViewController(restauerantsVC, animated: true)
         
        // AppDelegate.sharedAppDelegate().emitateBillWindow()
