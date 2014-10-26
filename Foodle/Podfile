@@ -4,4 +4,4 @@
 pod 'Colours'
 pod 'FrameAccessor'
 pod 'AFNetworking',  :inhibit_warnings => true
-pod 'MagicalRecord', :inhibit_warnings => true
+pod 'SDWebImage'
