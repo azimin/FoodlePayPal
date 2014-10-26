@@ -13,11 +13,14 @@ class FLModelHolder: NSObject {
 	var restaurants : [FLRestaurantEntity] = []
 	
 	var activeUsers : [FLUserEntity] = []
-	
+	var currentUser : FLUserEntity?
 	class var sharedInstance :FLModelHolder {
 		struct Singleton {
 			static let instance = FLModelHolder()
 		}
 		return Singleton.instance
+	}
+	override init() {
+		
 	}
 }
