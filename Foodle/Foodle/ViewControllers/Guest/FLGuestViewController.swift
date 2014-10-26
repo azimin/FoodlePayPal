@@ -60,7 +60,7 @@ class FLGuestViewController: FLBaseViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let restauerantsVC = FLRestaurantsViewController(nibName: "FLRestaurantsViewController", bundle: nil)
+        let restauerantsVC = FLUserInfoViewController(nibName: "FLUserInfoViewController", bundle: nil)
         self.navigationController?.pushViewController(restauerantsVC, animated: true)
     }
     
