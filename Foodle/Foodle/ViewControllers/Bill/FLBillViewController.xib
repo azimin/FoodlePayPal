@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FLBillViewController" customModule="Foodle" customModuleProvider="target">
+            <connections>
+                <outlet property="addTipsButton" destination="sq2-fI-oXM" id="7k1-cc-tn2"/>
+                <outlet property="payButton" destination="Pfe-Iu-v4n" id="deg-o3-gdU"/>
+                <outlet property="tableView" destination="KlM-yp-0DL" id="NvL-WJ-rYo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-yp-0DL">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="476"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="sxN-eG-MG4"/>
+                        <outlet property="delegate" destination="-1" id="Dir-dr-Lju"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfe-Iu-v4n">
+                    <rect key="frame" x="0.0" y="522" width="320" height="46"/>
+                    <color key="backgroundColor" red="0.090660200529999999" green="0.93999999759999997" blue="0.19065551729999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="DEb-1o-CRb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                    <state key="normal" title="Pay">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="payButtonAction:" destination="-1" eventType="touchUpInside" id="YYG-M5-R9Z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sq2-fI-oXM">
+                    <rect key="frame" x="0.0" y="476" width="320" height="46"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="DzI-5U-uij"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                    <state key="normal" title="Add tips">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="addTipsButton:" destination="-1" eventType="touchUpInside" id="Ksk-1M-p74"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Pfe-Iu-v4n" firstAttribute="top" secondItem="sq2-fI-oXM" secondAttribute="bottom" id="Cbg-Bg-ZjT"/>
+                <constraint firstAttribute="bottom" secondItem="Pfe-Iu-v4n" secondAttribute="bottom" id="Lvu-ks-uLw"/>
+                <constraint firstAttribute="trailing" secondItem="KlM-yp-0DL" secondAttribute="trailing" id="OFH-YW-QJm"/>
+                <constraint firstAttribute="trailing" secondItem="Pfe-Iu-v4n" secondAttribute="trailing" id="XNF-S1-mzV"/>
+                <constraint firstAttribute="trailing" secondItem="sq2-fI-oXM" secondAttribute="trailing" id="bEx-SK-zpH"/>
+                <constraint firstItem="KlM-yp-0DL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jOq-p0-VC4"/>
+                <constraint firstItem="sq2-fI-oXM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nIs-8Q-R4p"/>
+                <constraint firstItem="sq2-fI-oXM" firstAttribute="top" secondItem="KlM-yp-0DL" secondAttribute="bottom" id="pW1-Pu-bFu"/>
+                <constraint firstItem="Pfe-Iu-v4n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qYk-Ez-251"/>
+                <constraint firstItem="KlM-yp-0DL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tEo-x7-wQ2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="249" y="257"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

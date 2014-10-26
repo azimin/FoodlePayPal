@@ -12,11 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow!
+    var billWindow: UIWindow!
+    var blackBGWindow: UIWindow!
     
     var broadcaster: FLBeaconBroadcaster!
     var paymentsManager: FLPaymentsManager!
     var monitor: FLBeaconsMonitor!
     var kbroadCastBeacon = false
+    var isGuest = true
 
     class func sharedAppDelegate() -> AppDelegate {
         return UIApplication.sharedApplication().delegate as AppDelegate
@@ -42,11 +45,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.paymentsManager = FLPaymentsManager()
         
         // WINDOW
+        billWindow = UIWindow(frame: CGRectMake(0, 0, 286, 500))
+        billWindow.layer.frame = billWindow.bounds
+        billWindow.center = CGPointMake(CGRectGetMidX(UIScreen.mainScreen().bounds), CGRectGetMidY(UIScreen.mainScreen().bounds))
+        billWindow.hidden = true
+        billWindow.windowLevel = 0.9
+        billWindow.layer.cornerRadius = 20
+        billWindow.layer.masksToBounds = true
+        
+        blackBGWindow = UIWindow(frame: UIScreen.mainScreen().bounds)
+        blackBGWindow.backgroundColor = UIColor.blackColor()
+        blackBGWindow.alpha = 0
+        blackBGWindow.hidden = true
+        
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window.makeKeyAndVisible()
         
-        let restauerantsVC = FLUserInfoViewController(nibName: "FLUserInfoViewController", bundle: nil)
-        let navigationVC = FLBaseNavigationController(rootViewController: restauerantsVC)
+        var controller: UIViewController?
+        
+        if isGuest {
+            controller = FLRestaurantsViewController(nibName: "FLRestaurantsViewController", bundle: nil)
+        } else {
+            controller = FLUserInfoViewController(nibName: "FLUserInfoViewController", bundle: nil)
+        }
+
+        let navigationVC = FLBaseNavigationController(rootViewController: controller!)
 
         window.rootViewController = navigationVC
         
@@ -109,7 +132,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             println("pay")
             completionHandler()
         } else if (identifier == "ACTION_INFO") {
-            completionHandler()
+            emitateBillWindow()
+            //openBeaconRestaurant(FLRestaurantEntity(restaurantName: "My restaurant", restaurantDescription: "Swag", isIBecacon: true, restaurantImageURL: ""))
         }
     }
     
@@ -144,6 +168,92 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         actionCategory.identifier = "BILL_PAY"
         actionCategory.setActions([action1, action2], forContext: UIUserNotificationActionContext.Default)
         return actionCategory
+    }
+    
+    // MARK: - Open beacon
+    
+    func openBeaconRestaurant(restaurant: FLRestaurantEntity) {
+        if let rootNavVC = self.window.rootViewController as? FLBaseNavigationController {
+            let restauerantsVC = FLRestaurantViewController(nibName: "FLRestaurantViewController", bundle: nil)
+            restauerantsVC.restaurant = restaurant
+            restauerantsVC.tableNumber = 10
+            rootNavVC.pushViewController(restauerantsVC, animated: true)
+        }
+    }
+    
+    func emitateBillWindow() {
+        var dishes: [FLDishEntity] = []
+        var dish = FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat")
+        dish.count = 5
+        
+        var dish2 = FLDishEntity(dishName: "Bla bla", dishDescription: "bla bla bla b", dishImageURL: "coctailImage", dishPrice: 12.6, dishCategory: "Meat")
+        dish2.count = 2
+        
+        for i in 0..<8 {
+            dishes.append(FLDishEntity(dishName: "Bla bla", dishDescription: "bla bla bla b", dishImageURL: "coctailImage", dishPrice: 12.6, dishCategory: "Meat"))
+        }
+        
+        dishes.append(dish)
+        dishes.append(dish2)
+        showBillWindow(dishes)
+    }
+    
+    func showBillWindow(orders: [FLDishEntity]) {
+        billWindow.makeKeyAndVisible()
+        billWindow.backgroundColor = UIColor.redColor()
+        billWindow.center = window.center
+        var frame = billWindow.frame
+        frame.origin.y += UIScreen.mainScreen().bounds.height
+        
+        billWindow.frame = frame
+        self.blackBGWindow.hidden = false
+        
+        frame.origin.y -= UIScreen.mainScreen().bounds.height
+        spring(0.4, animations: {
+            self.billWindow.frame = frame
+            self.blackBGWindow.alpha = 0.6
+        })
+        
+        let vc = FLBillViewController(nibName: "FLBillViewController", bundle: nil)
+        vc.dishes = orders
+        
+        billWindow.rootViewController = vc
+        billWindow.rootViewController?.view.frame = billWindow.bounds
+    }
+
+    func spring(duration: NSTimeInterval, animations: (() -> Void)!) {
+        
+        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: nil, animations: {
+            
+            animations()
+            
+            }, completion: { finished in
+                
+        })
+    }
+    
+    func spring(duration: NSTimeInterval, animations: (() -> Void)!, complition: (() -> Void)!) {
+        
+        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: nil, animations: {
+            
+            animations()
+            
+            }, completion: { finished in
+            complition()
+        })
+    }
+
+    func closeBillWindow() {
+        window.makeKeyAndVisible()
+        
+        var frame = billWindow.frame
+        frame.origin.y -= UIScreen.mainScreen().bounds.height
+        spring(0.4, animations: {
+            self.billWindow.frame = frame
+            self.blackBGWindow.alpha = 0.0
+            }) {
+              self.blackBGWindow.hidden = true
+        }
     }
 
 }

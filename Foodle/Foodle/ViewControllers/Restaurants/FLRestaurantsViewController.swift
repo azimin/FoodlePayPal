@@ -71,5 +71,7 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
         
         let restauerantsVC = FLRestaurantViewController(nibName: "FLRestaurantViewController", bundle: nil)
         self.navigationController?.pushViewController(restauerantsVC, animated: true)
+        
+        AppDelegate.sharedAppDelegate().emitateBillWindow()
     }
 }
