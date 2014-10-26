@@ -62,7 +62,7 @@
 			
 			if (completionHandler)
 				completionHandler(responseData);
-			[[NSNotificationCenter defaultCenter] postNotificationName:@"restsurantsListUpdated" object:nil];
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"restsurantsListUpdatedWithBeacon" object:nil];
 			
 		} failure:^(id responseData) {
 			if (completionHandler)

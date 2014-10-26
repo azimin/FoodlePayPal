@@ -21,7 +21,7 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "settingsIcon"), style: UIBarButtonItemStyle.Done, target: self, action: Selector("openSettings"))
 				restaurants = FLModelHolder.sharedInstance.restaurants
 				NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateRestaurantsList:", name: "restsurantsListUpdated", object: nil)
-
+			NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateRestaurantsListBeacon:", name: "restsurantsListUpdatedWithBeacon", object: nil)
 				self.tableView.registerNib(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier);
     }
     
@@ -71,14 +71,19 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let restauerantsVC = FLRestaurantViewController(nibName: "FLRestaurantViewController", bundle: nil)
-				restauerantsVC.restaurant = self.restaurants[indexPath.row]
+				restauerantsVC.restaurant = self.restaurants[indexPath.section]
         self.navigationController?.pushViewController(restauerantsVC, animated: true)
         
        // AppDelegate.sharedAppDelegate().emitateBillWindow()
     }
 	
 	func updateRestaurantsList(notification: NSNotification) {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+		NSNotificationCenter.defaultCenter().removeObserver(self, name: "updateRestaurantsList", object: nil)
+		restaurants = FLModelHolder.sharedInstance.restaurants
+		self.tableView.reloadData()
+	}
+	func updateRestaurantsListBeacon(notification: NSNotification) {
+		NSNotificationCenter.defaultCenter().removeObserver(self, name: "updateRestaurantsListBeacon", object: nil)
 		restaurants = FLModelHolder.sharedInstance.restaurants
 		self.tableView.reloadData()
 	}
