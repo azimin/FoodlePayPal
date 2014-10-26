@@ -703,7 +703,7 @@
 				TargetAttributes = {
 					92CBB3D619FBA574000E5732 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = H4T5NA996X;
+						DevelopmentTeam = 5MGEMLZRS4;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -991,6 +991,7 @@
 					"\"SystemConfiguration\"",
 					"-ObjC",
 					"-lc++",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1037,6 +1038,7 @@
 					"\"SystemConfiguration\"",
 					"-ObjC",
 					"-lc++",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

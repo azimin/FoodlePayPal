@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var paymentsManager: FLPaymentsManager!
     var monitor: FLBeaconsMonitor!
     var kbroadCastBeacon = false
-    var isGuest = true
+    var isGuest = false
 
     class func sharedAppDelegate() -> AppDelegate {
         return UIApplication.sharedApplication().delegate as AppDelegate
