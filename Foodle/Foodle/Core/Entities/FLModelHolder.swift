@@ -10,7 +10,9 @@ import UIKit
 
 class FLModelHolder: NSObject {
 	
-	var restaurants : [FLModelHolder] = []
+	var restaurants : [FLRestaurantEntity] = []
+	
+	var activeUsers : [FLUserEntity] = []
 	
 	class var sharedInstance :FLModelHolder {
 		struct Singleton {

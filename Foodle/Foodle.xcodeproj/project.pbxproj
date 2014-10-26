@@ -82,7 +82,7 @@
 		A538528719FC608B0080F19E /* FLHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528619FC608B0080F19E /* FLHTTPRequestOperationManager.m */; };
 		A538528A19FC63E60080F19E /* FLUserRequestsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528919FC63E60080F19E /* FLUserRequestsManager.m */; };
 		A538528D19FC6E410080F19E /* FLRestaurantsRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528C19FC6E410080F19E /* FLRestaurantsRequestManager.m */; };
-		A538528F19FC73110080F19E /* FLRestaurantsHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538528E19FC73110080F19E /* FLRestaurantsHolder.swift */; };
+		A538528F19FC73110080F19E /* FLModelHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538528E19FC73110080F19E /* FLModelHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,7 +184,7 @@
 		A538528919FC63E60080F19E /* FLUserRequestsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLUserRequestsManager.m; path = Network/FLUserRequestsManager.m; sourceTree = "<group>"; };
 		A538528B19FC6E410080F19E /* FLRestaurantsRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLRestaurantsRequestManager.h; path = Network/FLRestaurantsRequestManager.h; sourceTree = "<group>"; };
 		A538528C19FC6E410080F19E /* FLRestaurantsRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLRestaurantsRequestManager.m; path = Network/FLRestaurantsRequestManager.m; sourceTree = "<group>"; };
-		A538528E19FC73110080F19E /* FLRestaurantsHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLRestaurantsHolder.swift; path = Core/Entities/FLRestaurantsHolder.swift; sourceTree = "<group>"; };
+		A538528E19FC73110080F19E /* FLModelHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLModelHolder.swift; path = Core/Entities/FLModelHolder.swift; sourceTree = "<group>"; };
 		FC060073648A666DD1C33A9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -270,7 +270,7 @@
 		92138C3519FBAA70001F041B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				A538528E19FC73110080F19E /* FLRestaurantsHolder.swift */,
+				A538528E19FC73110080F19E /* FLModelHolder.swift */,
 				92138C3619FBAA9E001F041B /* FLRestaurantEntity.swift */,
 				92D6EF9D19FBE6F60082EEE2 /* FLDishEntity.swift */,
 				92B9912E19FC268000E43E08 /* FLUserEntity.swift */,
@@ -776,7 +776,7 @@
 				92D6EF9119FBDE300082EEE2 /* FLMenuViewController.swift in Sources */,
 				92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */,
 				92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */,
-				A538528F19FC73110080F19E /* FLRestaurantsHolder.swift in Sources */,
+				A538528F19FC73110080F19E /* FLModelHolder.swift in Sources */,
 				92138C4319FBB927001F041B /* Font.swift in Sources */,
 				92D6EF7619FBC2970082EEE2 /* FLRestaurantViewController.swift in Sources */,
 				92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */,
