@@ -15,6 +15,16 @@
 
 @implementation FLRestaurantsRequestManager
 
++ (FLRestaurantsRequestManager *)sharedInstance
+{
+	static FLRestaurantsRequestManager *sharedInstance;
+	static dispatch_once_t once;
+	dispatch_once(&once, ^{
+		sharedInstance = [[self alloc] init];
+	});
+	return sharedInstance;
+}
+
 - (void)getRestaurantsWithBeaconId:(NSNumber *)beaconId completion:(void (^)(NSArray *))completionHandler {
 	if (self.isFetching)
 		return;
@@ -25,10 +35,12 @@
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
 			//Parse
 			NSArray *restaurants = [self parseRestaurantsWithData:responseData[@"restaurants"]];
+			
 			[FLModelHolder sharedInstance].restaurants = restaurants;
 			self.isFetching = NO;
 			if (completionHandler)
 				completionHandler(responseData);
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"restsurantsListUpdated" object:nil];
 		} failure:^(id responseData) {
 			self.isFetching = NO;
 			if (completionHandler)
@@ -50,6 +62,8 @@
 			
 			if (completionHandler)
 				completionHandler(responseData);
+			[[NSNotificationCenter defaultCenter] postNotificationName:@"restsurantsListUpdated" object:nil];
+			
 		} failure:^(id responseData) {
 			if (completionHandler)
 				completionHandler(nil);
