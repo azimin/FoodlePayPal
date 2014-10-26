@@ -146,6 +146,8 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
     // MARK: - Action
     @IBAction func buttonAction(sender: UIButton) {
         if (tableNumber != nil) {
+            AppDelegate.sharedAppDelegate().paymentsManager.delegate = self.navigationController!
+            AppDelegate.sharedAppDelegate().paymentsManager.pay(31.5)
             return
         }
         
