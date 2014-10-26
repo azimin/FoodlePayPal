@@ -41,6 +41,14 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
         } else {
             payButton.setTitle("Pay", forState: .Normal)
         }
+			FLUserRequestsManager().getUserMenuForRestaurant(self.restaurant.restaurantId) {
+				arrOfDishes in
+				if let dishes = arrOfDishes as? [FLDishEntity] {
+					self.restaurant.preferredDishes = dishes;
+
+				}
+			}
+			
     }
 
     override func didReceiveMemoryWarning() {

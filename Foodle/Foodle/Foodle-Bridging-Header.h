@@ -11,4 +11,5 @@
 #import "FLBeaconBroadcaster.h"
 #import "FLPaymentsManager.h"
 #import "FLBeaconsMonitor.h"
+#import "FLUserRequestsManager.h"
 #import "FLOrderRequestsManager.h"

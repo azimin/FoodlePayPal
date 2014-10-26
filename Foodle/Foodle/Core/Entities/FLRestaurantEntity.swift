@@ -18,7 +18,8 @@ class FLRestaurantEntity: NSObject {
     var restaurantRange = 0.0
     var restaurantRecommends: [String] = []
     var isIBecacon = false
-    
+		var preferredDishes: [FLDishEntity] = []
+	
     
     override init() {
         
