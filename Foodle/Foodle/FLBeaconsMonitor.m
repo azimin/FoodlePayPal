@@ -18,6 +18,7 @@
 		self.locationManager.delegate = self;
 		if (kUseBeacons) {
 			[self initRegion];
+			[[FLRestaurantsRequestManager sharedInstance] getRestaurantsCompletion:nil];
 		} else {
 			self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
 		}
@@ -72,7 +73,6 @@
 	NSLog(@"UUIDString %@ MAJOR %@ MINOR %@", beacon.proximityUUID.UUIDString, beacon.major, beacon.minor);
 	if (beacon.proximity == CLProximityUnknown) {
 		NSLog(@"Unknown Proximity");
-		[[FLRestaurantsRequestManager sharedInstance] getRestaurantsCompletion:nil];
 	} else if (beacon.proximity == CLProximityImmediate) {
 		[[FLRestaurantsRequestManager sharedInstance] getRestaurantsWithBeaconId:beacon.major completion:nil];
 		NSLog(@"Immediate");
