@@ -119,6 +119,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let action = userInfo["path"]?.integerValue {
             if (action == 1) {
             } else if (action == 2) {
+							FLOrderRequestsManager().getOrder(100, completion:nil)
+							
             }
         }
     }
@@ -182,20 +184,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func emitateBillWindow() {
-        var dishes: [FLDishEntity] = []
-        var dish = FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat")
-        dish.count = 5
-        
-        var dish2 = FLDishEntity(dishName: "Bla bla", dishDescription: "bla bla bla b", dishImageURL: "coctailImage", dishPrice: 12.6, dishCategory: "Meat")
-        dish2.count = 2
-        
-        for i in 0..<8 {
-            dishes.append(FLDishEntity(dishName: "Bla bla", dishDescription: "bla bla bla b", dishImageURL: "coctailImage", dishPrice: 12.6, dishCategory: "Meat"))
-        }
-        
-        dishes.append(dish)
-        dishes.append(dish2)
-        showBillWindow(dishes)
+ 
+				if FLModelHolder.sharedInstance.orderedDishes.count == 0 {
+					var dishes: [FLDishEntity] = []
+					var dish = FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat")
+					dish.count = 5
+					
+					var dish2 = FLDishEntity(dishName: "Bla bla", dishDescription: "bla bla bla b", dishImageURL: "coctailImage", dishPrice: 12.6, dishCategory: "Meat")
+					dish2.count = 2
+					
+					for i in 0..<8 {
+						dishes.append(FLDishEntity(dishName: "Bla bla", dishDescription: "bla bla bla b", dishImageURL: "coctailImage", dishPrice: 12.6, dishCategory: "Meat"))
+					}
+					
+					dishes.append(dish)
+					dishes.append(dish2)
+					FLModelHolder.sharedInstance.orderedDishes = dishes
+				}
+			
+        showBillWindow(FLModelHolder.sharedInstance.orderedDishes)
     }
     
     func showBillWindow(orders: [FLDishEntity]) {

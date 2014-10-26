@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface FLRestaurantsRequestManager : NSObject
++ (FLRestaurantsRequestManager *)sharedInstance;
 - (void)getRestaurantsWithBeaconId:(NSNumber *)beaconId completion:(void (^)(NSArray *history))completionHandler;
+- (void)getRestaurantsCompletion:(void (^)(NSArray *))completionHandler;
 @end

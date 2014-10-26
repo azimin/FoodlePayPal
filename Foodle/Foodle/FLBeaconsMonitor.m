@@ -52,8 +52,7 @@
 }
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
 	[self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
-	FLRestaurantsRequestManager	*restaurantsManager = [[FLRestaurantsRequestManager alloc] init];
-	[restaurantsManager getRestaurantsWithBeaconId:self.beaconRegion.major completion:nil];
+	[[FLRestaurantsRequestManager sharedInstance] getRestaurantsWithBeaconId:self.beaconRegion.major completion:nil];
 	NSLog(@"OH YES");
 }
 
@@ -74,16 +73,13 @@
 	if (beacon.proximity == CLProximityUnknown) {
 		NSLog(@"Unknown Proximity");
 	} else if (beacon.proximity == CLProximityImmediate) {
-		FLRestaurantsRequestManager	*restaurantsManager = [[FLRestaurantsRequestManager alloc] init];
-		[restaurantsManager getRestaurantsWithBeaconId:self.beaconRegion.major completion:nil];
+		[[FLRestaurantsRequestManager sharedInstance] getRestaurantsWithBeaconId:beacon.major completion:nil];
 		NSLog(@"Immediate");
 	} else if (beacon.proximity == CLProximityNear) {
-		FLRestaurantsRequestManager	*restaurantsManager = [[FLRestaurantsRequestManager alloc] init];
-		[restaurantsManager getRestaurantsWithBeaconId:self.beaconRegion.major completion:nil];
+		[[FLRestaurantsRequestManager sharedInstance] getRestaurantsWithBeaconId:beacon.major completion:nil];
 		NSLog(@"Near");
 	} else if (beacon.proximity == CLProximityFar) {
-		FLRestaurantsRequestManager	*restaurantsManager = [[FLRestaurantsRequestManager alloc] init];
-		[restaurantsManager getRestaurantsWithBeaconId:self.beaconRegion.major completion:nil];
+		[[FLRestaurantsRequestManager sharedInstance] getRestaurantsWithBeaconId:beacon.major completion:nil];
 		NSLog(@"FAR");
 	}
 }

@@ -19,11 +19,10 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
         super.viewDidLoad()
 
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "settingsIcon"), style: UIBarButtonItemStyle.Done, target: self, action: Selector("openSettings"))
-        
-        restaurants.append(FLRestaurantEntity(restaurantName: "Swag", restaurantDescription: "bla bla bla blabla blabla bla bla bla bla bla bla bla bla blabla blabla bla bla blabla blabla bla bla bla bla blabla blabla blabla bla bla bla bla blabla bla", isIBecacon: true, restaurantImageURL: "test"))
-        restaurants.append(FLRestaurantEntity(restaurantName: "Swag", restaurantDescription: "bla bla bla blabla blabla bla ba", isIBecacon: false, restaurantImageURL: "test"))
-        restaurants.append(FLRestaurantEntity(restaurantName: "Swag", restaurantDescription: "bla bla bla blabla blabla bla bla bla bla bla bla bla bla blabla blabla bla bla blabla blabla bla bla bla bla blabla bla", isIBecacon: false, restaurantImageURL: ""))
-        self.tableView.registerNib(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier);
+				restaurants = FLModelHolder.sharedInstance.restaurants
+				NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateRestaurantsList:", name: "restsurantsListUpdated", object: nil)
+
+				self.tableView.registerNib(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier);
     }
     
     func openSettings() {
@@ -70,8 +69,14 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let restauerantsVC = FLRestaurantViewController(nibName: "FLRestaurantViewController", bundle: nil)
+				restauerantsVC.restaurant = self.restaurants[indexPath.row]
         self.navigationController?.pushViewController(restauerantsVC, animated: true)
         
-        AppDelegate.sharedAppDelegate().emitateBillWindow()
+       // AppDelegate.sharedAppDelegate().emitateBillWindow()
     }
+	
+	func updateRestaurantsList(notification: NSNotification) {
+		restaurants = FLModelHolder.sharedInstance.restaurants
+		self.tableView.reloadData()
+	}
 }
