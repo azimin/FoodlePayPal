@@ -81,6 +81,8 @@
 		A538528419FC5E420080F19E /* FLOrderRequestsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528319FC5E420080F19E /* FLOrderRequestsManager.m */; };
 		A538528719FC608B0080F19E /* FLHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528619FC608B0080F19E /* FLHTTPRequestOperationManager.m */; };
 		A538528A19FC63E60080F19E /* FLUserRequestsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528919FC63E60080F19E /* FLUserRequestsManager.m */; };
+		A538528D19FC6E410080F19E /* FLRestaurantsRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A538528C19FC6E410080F19E /* FLRestaurantsRequestManager.m */; };
+		A538528F19FC73110080F19E /* FLRestaurantsHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A538528E19FC73110080F19E /* FLRestaurantsHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -180,6 +182,9 @@
 		A538528619FC608B0080F19E /* FLHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLHTTPRequestOperationManager.m; sourceTree = "<group>"; };
 		A538528819FC63E60080F19E /* FLUserRequestsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLUserRequestsManager.h; path = Network/FLUserRequestsManager.h; sourceTree = "<group>"; };
 		A538528919FC63E60080F19E /* FLUserRequestsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLUserRequestsManager.m; path = Network/FLUserRequestsManager.m; sourceTree = "<group>"; };
+		A538528B19FC6E410080F19E /* FLRestaurantsRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FLRestaurantsRequestManager.h; path = Network/FLRestaurantsRequestManager.h; sourceTree = "<group>"; };
+		A538528C19FC6E410080F19E /* FLRestaurantsRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FLRestaurantsRequestManager.m; path = Network/FLRestaurantsRequestManager.m; sourceTree = "<group>"; };
+		A538528E19FC73110080F19E /* FLRestaurantsHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FLRestaurantsHolder.swift; path = Core/Entities/FLRestaurantsHolder.swift; sourceTree = "<group>"; };
 		FC060073648A666DD1C33A9A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -265,6 +270,7 @@
 		92138C3519FBAA70001F041B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				A538528E19FC73110080F19E /* FLRestaurantsHolder.swift */,
 				92138C3619FBAA9E001F041B /* FLRestaurantEntity.swift */,
 				92D6EF9D19FBE6F60082EEE2 /* FLDishEntity.swift */,
 				92B9912E19FC268000E43E08 /* FLUserEntity.swift */,
@@ -581,6 +587,8 @@
 				A538528319FC5E420080F19E /* FLOrderRequestsManager.m */,
 				A538528819FC63E60080F19E /* FLUserRequestsManager.h */,
 				A538528919FC63E60080F19E /* FLUserRequestsManager.m */,
+				A538528B19FC6E410080F19E /* FLRestaurantsRequestManager.h */,
+				A538528C19FC6E410080F19E /* FLRestaurantsRequestManager.m */,
 			);
 			name = Server;
 			sourceTree = "<group>";
@@ -768,6 +776,7 @@
 				92D6EF9119FBDE300082EEE2 /* FLMenuViewController.swift in Sources */,
 				92CBB43619FBA801000E5732 /* FLBaseNavigationController.swift in Sources */,
 				92CBB3DD19FBA574000E5732 /* AppDelegate.swift in Sources */,
+				A538528F19FC73110080F19E /* FLRestaurantsHolder.swift in Sources */,
 				92138C4319FBB927001F041B /* Font.swift in Sources */,
 				92D6EF7619FBC2970082EEE2 /* FLRestaurantViewController.swift in Sources */,
 				92CBB43319FBA7B7000E5732 /* FLRestaurantsViewController.swift in Sources */,
@@ -777,6 +786,7 @@
 				92B9916D19FC480F00E43E08 /* FLPayPalController.swift in Sources */,
 				92138C3F19FBABED001F041B /* FrameCalculation.swift in Sources */,
 				92B9917119FC542300E43E08 /* FLUserInfoViewController.swift in Sources */,
+				A538528D19FC6E410080F19E /* FLRestaurantsRequestManager.m in Sources */,
 				92B9915419FC410000E43E08 /* FLBeaconsMonitor.m in Sources */,
 				92B9917619FC596600E43E08 /* FLPreferenceCell.swift in Sources */,
 				920DED5019FBFC0800217EE8 /* FLOrderViewController.swift in Sources */,

@@ -24,7 +24,8 @@
 
 - (void)registerManager:(NSString *)installationId {
 	[[FLHTTPRequestOperationManager getBasicManager] POST:@"/user/register/" parameters:@{@"installationId":installationId,
-																																												@"userId": [[NSUUID UUID] UUIDString]} success:^(AFHTTPRequestOperation *operation, id response) {
+																																												@"userId": [[NSUUID UUID] UUIDString],
+																																												@"restaurantId":@100} success:^(AFHTTPRequestOperation *operation, id response) {
 		[FLHTTPRequestOperationManager parseResponse:response data:operation.responseData withSuccess:^(id responseData) {
 			
 		} failure:^(id responseData) {
