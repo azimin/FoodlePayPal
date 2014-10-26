@@ -243,17 +243,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
     }
 
-    func closeBillWindow() {
-        window.makeKeyAndVisible()
+    func closeBillWindow(withPaying: Bool, price: CGFloat) {
+        
         
         var frame = billWindow.frame
         frame.origin.y -= UIScreen.mainScreen().bounds.height
-        spring(0.4, animations: {
+        spring(0.5, animations: {
             self.billWindow.frame = frame
             self.blackBGWindow.alpha = 0.0
             }) {
+              self.window.makeKeyAndVisible()
               self.blackBGWindow.hidden = true
+    
         }
+        
+        if withPaying {
+            self.paymentsManager.delegate = self.viewControlelr
+            self.paymentsManager.pay(price)
+        }
+    }
+    
+    var viewControlelr: FLBaseNavigationController {
+        return (window?.rootViewController as? FLBaseNavigationController)!
     }
 
 }

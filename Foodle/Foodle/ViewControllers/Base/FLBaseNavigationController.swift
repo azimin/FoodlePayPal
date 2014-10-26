@@ -21,14 +21,18 @@ class FLBaseNavigationController: UINavigationController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - PayPalDelegate
+    
+    func presentViewController(viewControllerToPresent: UIViewController) {
+        self.viewControllers.last!.presentViewController(viewControllerToPresent, animated: true, completion: nil)
     }
-    */
+    
+    func payPalPaymentViewController(paymentViewController: PayPalPaymentViewController, didCompletePayment completedPayment: PayPalPayment) {
+        self.viewControllers.last!.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func payPalPaymentDidCancel(paymentViewController: PayPalPaymentViewController) {
+        self.viewControllers.last!.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }

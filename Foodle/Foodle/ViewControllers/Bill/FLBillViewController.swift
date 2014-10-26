@@ -81,7 +81,7 @@ class FLBillViewController: FLBaseViewController, UITableViewDelegate, UITableVi
     
     
     @IBAction func payButtonAction(sender: UIButton) {
-        AppDelegate.sharedAppDelegate().closeBillWindow()
+        AppDelegate.sharedAppDelegate().closeBillWindow(true, price: totalCost)
     }
     
     @IBAction func addTipsButton(sender: UIButton) {

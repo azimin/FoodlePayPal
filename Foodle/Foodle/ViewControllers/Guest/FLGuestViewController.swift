@@ -32,10 +32,6 @@ class FLGuestViewController: FLBaseViewController, UITableViewDelegate, UITableV
     }
     
     func openMenu() {
-        let controller = FLPayPalController()
-        controller.currentController = self
-        AppDelegate.sharedAppDelegate().paymentsManager.delegate = self
-        AppDelegate.sharedAppDelegate().paymentsManager.pay(100)
         //[[[AppDelegate sharedAppDelegate]paymentsManager]	pay:@100.0];
     }
     
