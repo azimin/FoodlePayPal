@@ -86,6 +86,18 @@ class FLMenuViewController: FLBaseViewController, UITableViewDelegate, UITableVi
             sum += el.dishPrice * CGFloat(el.count)
         }
         orderPriceLabel.text = "\(sum)$"
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as FLDishTableViewCell
+        let snapshot = cell.addButton.pb_takeSnapshot()
+        
+        let imgView = UIImageView(frame: cell.addButton.frame)
+        imgView.image = snapshot
+        cell.addSubview(imgView)
+        
+        UIView.animateWithDuration(0.5, animations: { () -> Void in
+            imgView.y += 1000
+        })
+        
     }
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

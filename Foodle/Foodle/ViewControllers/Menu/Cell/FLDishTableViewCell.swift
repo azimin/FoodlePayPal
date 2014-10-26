@@ -14,6 +14,7 @@ protocol FLDishTableViewCellDelegate {
 
 class FLDishTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var dishImage: UIImageView!
     @IBOutlet weak var dishNameLabel: UILabel!
     @IBOutlet weak var dishDescriptionLabel: UILabel!

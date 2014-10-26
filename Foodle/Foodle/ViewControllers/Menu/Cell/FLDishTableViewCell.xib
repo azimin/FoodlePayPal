@@ -112,6 +112,7 @@ almond syrup,
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="addButton" destination="1tZ-ne-ghy" id="0dx-4U-uFj"/>
                 <outlet property="dishDescriptionLabel" destination="nmx-hY-HPD" id="4nN-9X-EbU"/>
                 <outlet property="dishImage" destination="vb3-8r-YUO" id="fdt-Z5-MFh"/>
                 <outlet property="dishNameLabel" destination="nmx-hY-HPD" id="bYb-5o-4W4"/>
