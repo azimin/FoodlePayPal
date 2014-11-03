@@ -35,6 +35,7 @@ class FLRestaurantViewController: FLBaseViewController, UITableViewDelegate, UIT
         self.tableView.registerNib(UINib(nibName: "FLButtonCell", bundle: nil), forCellReuseIdentifier: "FLButtonCell");
         self.tableView.registerNib(UINib(nibName: "FLRestaurantPayCell", bundle: nil), forCellReuseIdentifier: "FLRestaurantPayCell");
         
+        
         payButton.backgroundColor = UIColor.appColor()
 
         if (tableNumber == nil) {

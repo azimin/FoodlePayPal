@@ -22,9 +22,10 @@ class FLMenuViewController: FLBaseViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
 
         var dishes: [FLDishEntity] = []
-        dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla", dishImageURL: "coctailImage", dishPrice: 35.5, dishCategory: "Coctails"))
-        dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 25.5, dishCategory: "Coctails"))
-        dishes.append(FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat"))
+        dishes.append(FLDishEntity(dishName: "Shaverma", dishDescription: "Great taste dish", dishImageURL: "HOT_shaverma.png", dishPrice: 8.0, dishCategory: "Meat", priority: 1))
+        dishes.append(FLDishEntity(dishName: "Steak", dishDescription: "A steak is a cut of meat sliced perpendicular to the muscle fibers, potentially including a bone.", dishImageURL: "HOT_steak", dishPrice: 18.5, dishCategory: "Meat", priority: 1))
+        dishes.append(FLDishEntity(dishName: "Tartini", dishDescription: "A sampling from our menu, each of these dishes are made to the highest Slovenian and Italian standards.", dishImageURL: "HOT_Tartini", dishPrice: 10.5, dishCategory: "Meat", priority: -1))
+        dishes.append(FLDishEntity(dishName: "Red coctail", dishDescription: "Coctail with chery taste.", dishImageURL: "DRINKS_RED", dishPrice: 10.6, dishCategory: "Coctails"))
         
         dishesCategories = FLDishEntity.filterDishes(dishes)
         keys = dishesCategories.keys.array

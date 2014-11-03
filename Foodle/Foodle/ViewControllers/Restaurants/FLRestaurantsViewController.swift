@@ -23,6 +23,11 @@ class FLRestaurantsViewController: FLBaseViewController, UITableViewDelegate, UI
 				NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateRestaurantsList:", name: "restsurantsListUpdated", object: nil)
 			NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateRestaurantsListBeacon:", name: "restsurantsListUpdatedWithBeacon", object: nil)
 				self.tableView.registerNib(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier);
+        
+        self.restaurants.append(FLRestaurantEntity(restaurantName: "La Belle Hortense", restaurantDescription: "Cafeine regroupe sous sa bannière les cafés et restaurants de Xavier Denamur en gestion direct, ses deux affaires données en gérance libre à Sébastien Bailleul et Rebus rachetée en 2012.", isIBecacon: true, restaurantImageURL: "LesPhilosophes.jpg"))
+        self.restaurants.append(FLRestaurantEntity(restaurantName: "Torro Grill", restaurantDescription: "No matter what your expectations, at Torro Grill the largest grill and friendliest atmosphere in Moscow await.", isIBecacon: true, restaurantImageURL: "TorroGrill.JPG"))
+        self.restaurants.append(FLRestaurantEntity(restaurantName: "Rockand Burger", restaurantDescription: "Empresa gastronómica GANADORA de La Salle del Pedregal, excelente servicio y calidad en sus productos. En Rock n' Burger tu fuiste feliz. Generación 2008 - 2011", isIBecacon: false, restaurantImageURL: "RockandBurger.jpg"))
+        self.restaurants.append(FLRestaurantEntity(restaurantName: "Piggy Paint", restaurantDescription: "What's better than Jose's Mexican Restaurant famous for its great food, great service and great fun? It's here, just come and taste our cusine!", isIBecacon: false, restaurantImageURL: "PiggyPoint.jpg"))
     }
     
     func openSettings() {

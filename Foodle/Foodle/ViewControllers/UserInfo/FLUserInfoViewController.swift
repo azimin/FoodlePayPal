@@ -26,16 +26,23 @@ class FLUserInfoViewController: FLBaseViewController, UITableViewDelegate, UITab
         // Do any additional setup after loading the view.
         
         var dish = FLDishEntity(dishName: "Coctail", dishDescription: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla", dishImageURL: "coctailImage", dishPrice: 10.6, dishCategory: "Meat")
-        dish.count = 5
+        dish.count = 2
         
-        var dish2 = FLDishEntity(dishName: "Bla bla", dishDescription: "bla bla bla b", dishImageURL: "coctailImage", dishPrice: 12.6, dishCategory: "Meat")
-        dish2.count = 2
+        var dish2 = FLDishEntity(dishName: "Burger", dishDescription: "bla bla bla b", dishImageURL: "coctailImage", dishPrice: 12.6, dishCategory: "Meat")
+        dish2.count = 1
+        
+        var dish3 = FLDishEntity(dishName: "Cheese", dishDescription: "bla bla bla b", dishImageURL: "coctailImage", dishPrice: 5.5, dishCategory: "Meat")
+        dish3.count = 1
         
         order.append(dish)
         order.append(dish2)
+        order.append(dish3)
         
+        preferences.append(FLPreferenceEntity(name: "Fruits", count: 11))
         preferences.append(FLPreferenceEntity(name: "Cheese", count: 10))
-        preferences.append(FLPreferenceEntity(name: "Beef", count: 10))
+        preferences.append(FLPreferenceEntity(name: "Beef", count: 8))
+        preferences.append(FLPreferenceEntity(name: "Rice", count: 4))
+        preferences.append(FLPreferenceEntity(name: "Spices", count: 1))
     }
 
     

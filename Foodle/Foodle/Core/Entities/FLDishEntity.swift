@@ -29,6 +29,15 @@ class FLDishEntity: NSObject {
         self.dishCategory = dishCategory
     }
     
+    init(dishName: String, dishDescription: String, dishImageURL: String, dishPrice: CGFloat, dishCategory: String, priority: Int) {
+        self.dishName = dishName
+        self.dishDescription = dishDescription
+        self.dishImageURL = dishImageURL
+        self.dishPrice = dishPrice
+        self.dishCategory = dishCategory
+        self.dishPriority = priority
+    }
+    
     class func filterDishes(dishes: [FLDishEntity]) -> [String: [FLDishEntity]] {
         var result: [String: [FLDishEntity]] = [:]
         for el in dishes {

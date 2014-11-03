@@ -22,9 +22,11 @@ class FLGuestViewController: FLBaseViewController, UITableViewDelegate, UITableV
         
         self.tableView.registerNib(UINib(nibName: "FLGuestCell", bundle: nil), forCellReuseIdentifier: "FLGuestCell");
         // Do any additional setup after loading the view.
-        users.append(FLUserEntity(userName: "Alex Zimin", userBill: 25.5, userNewDishes: 3, userTable: 8))
-        users.append(FLUserEntity(userName: "Alex", userBill: 5.5, userNewDishes: 0, userTable: 1))
-        users.append(FLUserEntity(userName: "Alexander Zimin", userBill: 45.5, userNewDishes: 13, userTable: 14))
+        users.append(FLUserEntity(userName: "Alex", userBill: 25.5, userNewDishes: 3, userTable: 8))
+        users.append(FLUserEntity(userName: "Nikita Pe", userBill: 5.5, userNewDishes: 0, userTable: 1))
+        users.append(FLUserEntity(userName: "Martin ", userBill: 45.5, userNewDishes: 13, userTable: 14))
+        users.append(FLUserEntity(userName: "Mari De Tori", userBill: 10.5, userNewDishes: 0, userTable: 12))
+        users.append(FLUserEntity(userName: "Pay Palich", userBill: 20.5, userNewDishes: 0, userTable: 3))
     }
     
     func openSettings() {
